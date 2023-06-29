@@ -3,7 +3,7 @@ body {
 }
 
 #banniere {
-    width: 100%;
+    width: 1847px;
     height: 200px;
 }
 
@@ -13,16 +13,17 @@ body {
 }
 
 li {
-    min-width: 340px;
+    min-width: 300px;
 }
 
 .cat {
-    width: 300px;
-    height: 330px;
+    width: 350px;
+    height: 330px
+    
 }
 
 .cat:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 .plat {
@@ -33,8 +34,9 @@ li {
 #footer {
     position: relative;
     bottom: 25px;
-    border: 3px solid wheat;
+    border: 5px solid #970747;
     width: 290px;
+    background-color: #970747;
 }
 
 #footer2 {
@@ -45,8 +47,7 @@ li {
 }
 
 .rs {
-    width: 41px;
-    height: 41px;
+    color: antiquewhite;
 }
 
 .btn {
@@ -108,3 +109,5 @@ li {
     background-repeat: no-repeat;
     background-image: url(https://www.spoon-restaurant.com/wp-content/uploads/2022/06/Spoon_cLe_Bonbon-1-scaled.jpg)
 }
+
+
