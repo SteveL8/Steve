@@ -21,26 +21,26 @@
         </div>
       </div>
     </div>
-  </div>
+
     <div class="container img-fluid">
       <div class="row">
         <div class="col-lg-4 col-md-6 col-sm-12 mt-4   ">
-          <a href="plat_asainfood.html"><img src="img/Recette-Poulet-Teriyaki.jpg" class="img-fluid rounded pb-5 ms-5 object-fit-cover cat" alt="Japonais" title="Japonais"></a>
+          <a href="plat_asainfood.php"><img src="img/Recette-Poulet-Teriyaki.jpg" class="img-fluid rounded pb-5 ms-5 object-fit-cover cat" alt="Japonais" title="Japonais"></a>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
-          <a href="plat_pasta.html"><img src="img/Pâtesricotta.jpeg" class="img-fluid rounded pb-5 ms-5 cat" alt="pasta" title="pasta"></a>
+          <a href="plat_pasta.php"><img src="img/Pâtesricotta.jpeg" class="img-fluid rounded pb-5 ms-5 cat" alt="pasta" title="pasta"></a>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
-          <a href="plat_burger.html"><img src="img/cheeseb.jpg" class="img-fluid rounded pb-5 ms-5 object-fit-cover cat" alt="burger" title="burger"></a>
+          <a href="plat_burger.php"><img src="img/cheeseb.jpg" class="img-fluid rounded pb-5 ms-5 object-fit-cover cat" alt="burger" title="burger"></a>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12 ">
-          <a href="plat_pizza.html"><img src="img/pizza_cat.jpg" class="img-fluid rounded pb-5 ms-5 cat" alt="pizza" title="pizza"></a>
+          <a href="plat_pizza.php"><img src="img/pizza_cat.jpg" class="img-fluid rounded pb-5 ms-5 cat" alt="pizza" title="pizza"></a>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12">
-          <a href="plat_boisson.html"><img src="img/evian.jpg" class="img-fluid rounded pb-5 ms-5 cat object-fit-cover" alt="Boissons" title="Boissons"></a>
+          <a href="plat_boisson.php"><img src="img/evian.jpg" class="img-fluid rounded pb-5 ms-5 cat object-fit-cover" alt="Boissons" title="Boissons"></a>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12 ">
-          <a href="plat_dessert.html"><img src="img/mousse-chocolat-recette.jpg" class="img-fluid rounded pb-5 ms-5 cat object-fit-cover" alt="mousse_au_chocolat" title="mousse_au_chocolat"></a>
+          <a href="plat_dessert.php"><img src="img/mousse-chocolat-recette.jpg" class="img-fluid rounded pb-5 ms-5 cat object-fit-cover" alt="mousse_au_chocolat" title="mousse_au_chocolat"></a>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12 my-5">
           <img src="img/pizza-margherita.jpg" class="img-fluid rounded pb-5 ms-5 plat" alt="pizza_margherita" title="pizza_margherita">
@@ -56,7 +56,8 @@
     <?php
     require("footer.php")
     ?>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
 
 </html>

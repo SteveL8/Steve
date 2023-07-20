@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
-  <title>Plat Burger</title>
+  <title>Boisson</title>
 </head>
 
 <body>
@@ -23,10 +23,11 @@
   <div class="container img-fluid">
     <div class="row">
       <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
-        <img src="img/cheeseb.jpg" class="img-fluid rounded-4 pb-1  ms-5 cat" alt="Cheeseburger" title="Cheeseburger"  id="cheese">
+        <img src="img/evian.jpg" class="img-fluid rounded-4 pb-1 object-fit-cover ms-5 cat" alt="eau_evian" title="eau_evian">
         <div class="ms-5">
-          <div class="link-danger fw-bold">Cheeseburger<br></div><div>Prix : 10,90 €</div><label>Quantité: </label>
-          <select id="qu" name="q">
+          <div class="link-danger fw-bold">Evian<br></div>
+          <div>Prix : 1 €</div><label>Quantité: </label>
+          <select id="qb" name="q">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -37,14 +38,15 @@
             <option value="8">8</option>
             <option value="9">9</option>
           </select>
-          <button type="button" class="add-to-cart btn btn-outline-secondary" data-id="cheese" data-name="Cheeseburger" data-price="29,00" data-weight="97" data-url="">Ajouter au panier</button>
+          <button type="button" class="add-to-cart btn btn-outline-secondary" data-id="cheese" data-name="Cheeseburger" data-price="1" data-weight="97" data-url="">Ajouter au panier</button>
         </div>
       </div>
       <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
-        <img src="img/Fishburger.jpg" class="img-fluid rounded-4 pb-1 ms-5 object-fit-cover cat" alt="FishBurger" title="FishBurger" id="fish">
+        <img src="img/Coca-Cola.jpg" class="img-fluid rounded-4 pb-1 ms-5 object-fit-cover cat" alt="coca-cola" title="coca-cola">
         <div class="ms-5">
-          <div class="link-danger fw-bold">FishBurger<br></div><div>Prix : 10,90 €</div><label>Quantité: </label>
-          <select id="qu2" name="q">
+          <div class="link-danger fw-bold">Coca Cola<br></div>
+          <div>Prix : 1,50 €</div><label>Quantité: </label>
+          <select id="qb2" name="q">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -55,14 +57,15 @@
             <option value="8">8</option>
             <option value="9">9</option>
           </select>
-          <button type="button" class="add-to-cart btn btn-outline-secondary" data-id="fish" data-name="FishBurger" data-price="29,00" data-weight="97" data-url="">Ajouter au panier</button>
+          <button type="button" class="add-to-cart btn btn-outline-secondary" data-id="fish" data-name="FishBurger" data-price="1,50" data-weight="97" data-url="">Ajouter au panier</button>
         </div>
       </div>
       <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
-        <img src="img/burger_bacon.jpg" class="img-fluid rounded pb-1 ms-5 object-fit-cover  cat" alt="Burger_Bacon" title="Burger_Bacon" id="bacon">
+        <img src="img/Sprite.jpg" class="img-fluid rounded pb-1 ms-5 object-fit-cover  cat" alt="sprite" title="sprite">
         <div class="ms-5">
-          <div class="link-danger fw-bold">Burger Bacon<br></div><div>Prix : 10,90 €</div><label>Quantité: </label>
-          <select id="qu3" name="q">
+          <div class="link-danger fw-bold">Sprite<br></div>
+          <div>Prix : 1,50 €</div><label>Quantité: </label>
+          <select id="qb3" name="q">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -73,14 +76,15 @@
             <option value="8">8</option>
             <option value="9">9</option>
           </select>
-          <button type="button" class="add-to-cart btn btn-outline-secondary" data-id="bacon" data-name="Burger_Bacon" data-price="29,00" data-weight="97" data-url="">Ajouter au panier</button>
+          <button type="button" class="add-to-cart btn btn-outline-secondary" data-id="bacon" data-name="Burger_Bacon" data-price="1,50" data-weight="97" data-url="">Ajouter au panier</button>
         </div>
       </div>
       <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
-        <img src="img/burger-poulet-croustillant.jpg" class="img-fluid rounded pb-1 ms-5 object-fit-cover cat" alt="Burger-poulet" title="Burger-poulet"  id="poulet">
+        <img src="img/ice-tea.jpg" class="img-fluid rounded pb-1 ms-5 object-fit-cover cat" alt="ice_tea" title="ice_tea">
         <div class="ms-5 mb-5">
-          <div class="link-danger fw-bold">Burger poulet<br></div><div>Prix : 10,90 €</div><label>Quantité: </label>
-          <select id="qu4" name="q">
+          <div class="link-danger fw-bold">Ice tea<br></div>
+          <div>Prix : 1,50 €</div><label>Quantité: </label>
+          <select id="qb4" name="q">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -91,14 +95,15 @@
             <option value="8">8</option>
             <option value="9">9</option>
           </select>
-          <button type="button" class="add-to-cart btn btn-outline-secondary" data-id="poulet" data-name="Burger-poulet" data-price="29,00" data-weight="97" data-url="">Ajouter au panier</button>
+          <button type="button" class="add-to-cart btn btn-outline-secondary" data-id="poulet" data-name="Burger-poulet" data-price="1,50" data-weight="97" data-url="">Ajouter au panier</button>
         </div>
       </div>
       <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
-        <img src="img/burgers-vegetariens.jpg" class="img-fluid rounded pb-1 ms-5 object-fit-cover cat" alt="Burger_végétarien" title="burgers-vegetariens" id="vegies">
+        <img src="img/oasis.jpg" class="img-fluid rounded pb-1 ms-5 object-fit-cover cat" alt="oasis" title="oasis">
         <div class="ms-5 mb-5">
-          <div class="link-danger fw-bold">Burger vegetariens<br></div><div>Prix : 10,90 €</div><label>Quantité: </label>
-          <select id="qu5" name="q">
+          <div class="link-danger fw-bold">Oasis<br></div>
+          <div>Prix : 1,50 €</div><label>Quantité: </label>
+          <select id="qb5" name="q">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -109,14 +114,15 @@
             <option value="8">8</option>
             <option value="9">9</option>
           </select>
-          <button type="button" class="add-to-cart btn btn-outline-secondary" data-id="vegies" data-name="Burger_végétarien" data-price="29,00" data-weight="97" data-url="">Ajouter au panier</button>
+          <button type="button" class="add-to-cart btn btn-outline-secondary" data-id="vegies" data-name="Burger_végétarien" data-price="1,50" data-weight="97" data-url="">Ajouter au panier</button>
         </div>
       </div>
       <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
-        <img src="img/burger-au-poulet-et-avocat.jpeg" class="img-fluid rounded pb-1 ms-5 object-fit-cover  cat" alt="burger-au-poulet-et-avocat" title="burger-au-poulet-et-avocat" id="burger_avocats" >
+        <img src="img/Tropico.jpg" class="img-fluid rounded pb-1 ms-5 object-fit-cover  cat" alt="tropico" title="tropico">
         <div class="ms-5 mb-5">
-          <div class="link-danger fw-bold">Burger au-poulet et avocat<br></div><div>Prix : 10,90 €</div><label>Quantité: </label>
-          <select id="qu6" name="q">
+          <div class="link-danger fw-bold">Tropico<br></div>
+          <div>Prix : 1,50 €</div><label>Quantité: </label>
+          <select id="qb6" name="q">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -127,24 +133,25 @@
             <option value="8">8</option>
             <option value="9">9</option>
           </select>
-          <button type="button" class="add-to-cart btn btn-outline-secondary" data-id="patesfromages" data-name="Pâtes_aux_3_fromages" data-price="29,00" data-weight="97" data-url="">Ajouter au panier</button>
+          <button type="button" class="add-to-cart btn btn-outline-secondary" data-id="patesfromages" data-name="Pâtes_aux_3_fromages" data-price="1,50" data-weight="97" data-url="">Ajouter au panier</button>
         </div>
       </div>
     </div>
     <div class="container-fluid d-none d-lg-block">
       <div class="row text-center">
         <div class="col-6">
-          <a href="plat_pasta.php"><button class="btn btn-outline-secondary mt-5 bouton" id="precedent">Précedent</button></a>
+          <a href="plat_pizza.php"><button class="btn btn-outline-secondary mt-5 bouton" id="precedent">Précedent</button></a>
         </div>
         <div class="col-6">
-          <a href="plat_pizza.php"><button class="btn btn-outline-secondary mt-5  bouton" id="suivant">Suivant</button></a>
+          <a href="plat_dessert.php"><button class="btn btn-outline-secondary mt-5  bouton" id="suivant">Suivant</button></a>
         </div>
       </div>
     </div>
-    <?php
-    require("footer.php")
-    ?>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </div>
+  <?php
+  require("footer.php")
+  ?>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 
 </body>
 

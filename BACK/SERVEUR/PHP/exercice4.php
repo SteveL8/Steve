@@ -69,14 +69,20 @@ $tab = array(4, 3, 8, 2);
     somme();*/
     ?>
     <?php
+    //Création de la fonction 'somme()' avec le parametre'$stab'qui est un tableau d'entiers. 
+    //Cette fonction calcule la somme des éléments du tableau en utilisant une boucle foreach.
     function somme($stab)
     {
         $resultat = 0;
+        //Boucle qui parcourt le tableau '$tab'elle récupère la valeur de l'élément de la variable '$value'
         foreach ($stab as $value) {
+            //À chaque itération, la valeur de l'élément actuel est ajoutée à la variable $resultat, 
+            //ce qui permet de calculer la somme totale des éléments du tableau.
             $resultat += $value;
         }
         echo "La valeur du tableau est " . $resultat;
     }
+    //Appel la fonction et affiche le tableau contenant les valeur.
     somme(array(4, 3, 8, 2))
     ?>
     <br>

@@ -165,7 +165,7 @@
             <th>Capitales</th>
         </tr>
         <!--Inverse les clés et valeurs du tableau $capitales, du coup les pays deviennent les clés 
-        et inversement les capitales deviennent les valeurs puis triés par ordrealphabétique -->
+        et inversement les capitales deviennent les valeurs puis triés par ordre alphabétique -->
         <?php $capitales = array_flip($capitales);
         ksort($capitales);
         //Parcourt le tableau $capitales trié et récupère chaque clé (le nom du pays) 
@@ -201,6 +201,9 @@
             <th>Pays</th>
             <th>Capitales</th>
         </tr>
+        <!--inverse les clés et les valeurs du tableau $capitales, les pays deviennent les clés et les capitales les valeurs.
+            Ensuite "ksort"est utilisé pour trié les capitale par ordre alphabétique.
+            Puis la fonction "array_splice($capitales, 5, 9)qui supprime les 9 capitales situées entre les index 5 et 13 inclus -->
         <?php $capitales = array_flip($capitales);
         ksort($capitales);
         array_splice($capitales, 5, 9);
@@ -230,12 +233,14 @@
     ?>
     <table class="table table-secondary w-25 table-striped-columns">
         <?php
+        //Trie le tableau par ordre alphabétique
         ksort($departements);
 
         echo '<tr><th>Région</th><th>Départements</th></tr>';
-
+        //trie et récupère chaque clé (le nom de la région) dans la variable $region et chaque valeur dans la variable $deps
         foreach ($departements as $region => $deps) {
             echo '<tr>';
+            //Affiche les noms des département tranformé en chaine de caractères grâce a la fonction "implode".
             echo '<td>' . $region . '</td>';
             echo '<td>' . implode(', ', $deps) . '</td>';
             echo '</tr>';
@@ -256,9 +261,11 @@
         echo '<tr><th>Région</th><th>Départements</th></tr>';
 
         foreach ($departements as $region => $deps) {
+            //Permet de compter le nombre de valeurs du tableau $deps et est stocker dans $de
             $de = array_count_values($deps);
             echo '<tr>';
             echo '<td>' . $region . '</td>';
+            //Affiche le nombre total de departement part region
             echo '<td>' . count($deps) . '</td>';
             echo '</tr>';
         }
