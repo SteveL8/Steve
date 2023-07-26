@@ -25,7 +25,7 @@
       <div class="col-lg-4 col-md-6 col-sm-12 mt-4 ">
         <img src="img/Recette-Poulet-Teriyaki.jpg" class="img-fluid rounded-4 pb-1 ms-5 object-fit-cover cat" alt="Poulet_Teriyaki" title="Poulet_Teriyaki" id="poulet">
         <div class="ms-5">
-        <p><a href="plat_asainfood.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Poulet teriyaki</a></p>
+          <p><a href="teriyaki_description.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Poulet teriyaki</a></p>
           <div>Prix : 29,00 €</div><label>Quantité: </label>
           <select id="qt" name="q">
             <option value="1">1</option>
@@ -44,7 +44,7 @@
       <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
         <img src="img/Sushi.jpeg" class="img-fluid rounded-4 pb-1 ms-5 object-fit-cover cat" alt="Sushi" title="Sushi" id="sushi">
         <div class="ms-5">
-          <div class="link-danger fw-bold">Sushi<br></div>
+          <p><a href="sushi_description.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Sushi</a></p>
           <div>Prix : 11,00 €</div><label>Quantité: </label>
           <select id="qt2" name="q">
             <option value="1">1</option>
@@ -63,7 +63,7 @@
       <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
         <img src="img/Ramen.jpg" class="img-fluid rounded-4 pb-1 ms-5  cat" alt="Ramen" title="Ramen" id="ramen">
         <div class="ms-5">
-          <div class="link-danger fw-bold">Ramen<br></div>
+          <p><a href="ramen_description.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Ramen</a></p>
           <div>Prix : 24,00 €</div><label>Quantité: </label>
           <select id="qt3" name="q">
             <option value="1">1</option>
@@ -82,7 +82,7 @@
       <div class="col-lg-4 col-md-6 col-sm-12  mt-5">
         <img src="img/maki-sushi.jpeg" class="img-fluid rounded-4 pb-1 ms-5 object-fit-cover cat" alt="Maki" title="Maki" id="maki">
         <div class="ms-5 mb-5">
-          <div class="link-danger fw-bold">Maki<br></div>
+          <p><a href="maki_description.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Maki</a></p>
           <div>Prix : 5,90 €</div><label>Quantité: </label>
           <select id="qt4" name="q">
             <option value="1">1</option>
@@ -101,7 +101,7 @@
       <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
         <img src="img/soba.jpg" class="img-fluid rounded-4 pb-1 ms-5 object-fit-cover cat" alt="Soba" title="Soba" id="soba">
         <div class="ms-5 mb-5">
-          <div class="link-danger fw-bold">Soba<br></div>
+          <p><a href="soba_description.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Soba</a></p>
           <div>Prix : 18,00 €</div><label>Quantité: </label>
           <select id="qt5" name="q">
             <option value="1">1</option>
@@ -118,9 +118,9 @@
         </div>
       </div>
       <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
-        <img src="img/Brochette.webp" class="img-fluid rounded-4 pb-1 ms-5 object-fit-cover cat" alt="Brochette" title="Borchette"  id="brochette">
+        <img src="img/Brochette.webp" class="img-fluid rounded-4 pb-1 ms-5 object-fit-cover cat" alt="Brochette" title="Borchette" id="brochette">
         <div class="ms-5 mb-5">
-          <div class="link-danger fw-bold">Brochette<br></div>
+          <p><a href="brochette_description.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Brochette</a></p>
           <div>Prix : 9,90 €</div><label>Quantité: </label>
           <select id="qt6" name="q">
             <option value="1">1</option>
@@ -148,10 +148,10 @@
       </div>
     </div>
   </div>
-    <?php
-    require("footer.php")
-    ?>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  <?php
+  require("footer.php")
+  ?>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
 
 </html>

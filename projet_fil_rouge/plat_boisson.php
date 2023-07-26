@@ -25,7 +25,7 @@
       <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
         <img src="img/evian.jpg" class="img-fluid rounded-4 pb-1 object-fit-cover ms-5 cat" alt="eau_evian" title="eau_evian">
         <div class="ms-5">
-          <div class="link-danger fw-bold">Evian<br></div>
+          <p><a href="evian_description.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Evian</a></p>
           <div>Prix : 1 €</div><label>Quantité: </label>
           <select id="qb" name="q">
             <option value="1">1</option>
@@ -44,7 +44,7 @@
       <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
         <img src="img/Coca-Cola.jpg" class="img-fluid rounded-4 pb-1 ms-5 object-fit-cover cat" alt="coca-cola" title="coca-cola">
         <div class="ms-5">
-          <div class="link-danger fw-bold">Coca Cola<br></div>
+          <p><a href="coca_description.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Coca cola</a></p>
           <div>Prix : 1,50 €</div><label>Quantité: </label>
           <select id="qb2" name="q">
             <option value="1">1</option>
@@ -63,6 +63,7 @@
       <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
         <img src="img/Sprite.jpg" class="img-fluid rounded pb-1 ms-5 object-fit-cover  cat" alt="sprite" title="sprite">
         <div class="ms-5">
+          <p><a href="sprite_descrition.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Sprite</a></p>
           <div class="link-danger fw-bold">Sprite<br></div>
           <div>Prix : 1,50 €</div><label>Quantité: </label>
           <select id="qb3" name="q">
@@ -82,7 +83,7 @@
       <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
         <img src="img/ice-tea.jpg" class="img-fluid rounded pb-1 ms-5 object-fit-cover cat" alt="ice_tea" title="ice_tea">
         <div class="ms-5 mb-5">
-          <div class="link-danger fw-bold">Ice tea<br></div>
+          <p><a href="icetea_description.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Ice tea</a></p>
           <div>Prix : 1,50 €</div><label>Quantité: </label>
           <select id="qb4" name="q">
             <option value="1">1</option>
@@ -101,7 +102,7 @@
       <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
         <img src="img/oasis.jpg" class="img-fluid rounded pb-1 ms-5 object-fit-cover cat" alt="oasis" title="oasis">
         <div class="ms-5 mb-5">
-          <div class="link-danger fw-bold">Oasis<br></div>
+          <p><a href="oasis_decription.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Oasis</a></p>
           <div>Prix : 1,50 €</div><label>Quantité: </label>
           <select id="qb5" name="q">
             <option value="1">1</option>
@@ -120,7 +121,7 @@
       <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
         <img src="img/Tropico.jpg" class="img-fluid rounded pb-1 ms-5 object-fit-cover  cat" alt="tropico" title="tropico">
         <div class="ms-5 mb-5">
-          <div class="link-danger fw-bold">Tropico<br></div>
+          <p><a href="tropico_description.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Tropico</a></p>
           <div>Prix : 1,50 €</div><label>Quantité: </label>
           <select id="qb6" name="q">
             <option value="1">1</option>

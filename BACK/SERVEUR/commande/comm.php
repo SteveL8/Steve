@@ -13,11 +13,22 @@
     <?php
     require("header.php")
     ?>
-    <div class="container-">
-        <div class="row">
-            <div class="col">
-                <img src="img/twitter_header_photo_2.png" class="img-fluid object-fit-cover" alt="Banniere"
-                    title="Banniere" id="banniere">
+    <div class="container d-flex justify-content-center  align-items-center card border-dark rounded-4 mt-5" style="max-width: 540px;">
+        <div class="row g-0">
+            <div class="col-sm-4">
+                <img src="img/pizza-margherita.jpg" class="img-fluid rounded-start mt-4" alt="pizza-margarita" title="pizza-margarita">
+            </div>
+            <div class="col-sm-8">
+                <div class="card-body">
+                    <h5 class="card-title">Pizza Margarita</h5>
+                    <p class="card-text">Pâtes à pizza 400 g, Purée de tomate 6 cuillère, Mozzarella de bufflone 250 g,
+                        Basilic frais quelques feuilles,
+                        Hule d'olive 5cuillère à soupe, Sel, Poivre </p>
+                    <div class="input-group">
+                        <span class="input-group-text">Quantité</span>
+                        <input type="number" class="form-control" value="1" min="1" max="20">
+                    </div>
+                </div>
             </div>
         </div>
     </div>

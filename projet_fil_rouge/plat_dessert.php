@@ -23,7 +23,7 @@
       <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
         <img src="img/mousse-chocolat-recette.jpg" class="img-fluid rounded-4 pb-1 object-fit-cover ms-5 cat" alt="mousse-chocolat" title="mousse-chocolat">
         <div class="ms-5">
-          <div class="link-danger fw-bold">Mousse chocolat<br></div>
+        <p><a href="#" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Mousse au chocolat</a></p>
           <div>Prix : 4 €</div><label>Quantité: </label>
           <select id="qz" name="q">
             <option value="1">1</option>
@@ -42,7 +42,7 @@
       <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
         <img src="img/tarte-au-citron.jpeg" class="img-fluid rounded-4 pb-1 ms-5 object-fit-cover cat" alt="tarte-au-citron" title="tarte-au-citron">
         <div class="ms-5">
-          <div class="link-danger fw-bold">Tarte au citron<br></div>
+        <p><a href="#" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Tarte au citron</a></p>
           <div>Prix : 4 €</div><label>Quantité: </label>
           <select id="qz2" name="q">
             <option value="1">1</option>
@@ -61,7 +61,7 @@
       <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
         <img src="img/Tiramisu.jpg" class="img-fluid rounded pb-1 ms-5 object-fit-cover  cat" alt="tiramisu" title="tiramisu">
         <div class="ms-5">
-          <div class="link-danger fw-bold">Tiramisu<br></div>
+        <p><a href="#" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Tiramisu</a></p>
           <div>Prix : 4 €</div><label>Quantité: </label>
           <select id="qz3" name="q">
             <option value="1">1</option>
@@ -80,7 +80,7 @@
       <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
         <img src="img/Paris-Bre.JPG" class="img-fluid rounded pb-1 ms-5 object-fit-cover cat" alt="paris_brest" title="paris_brest">
         <div class="ms-5 mb-5">
-          <div class="link-danger fw-bold">Paris brest<br></div>
+        <p><a href="#" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Paris brest</a></p>
           <div>Prix : 4 €</div><label>Quantité: </label>
           <select id="qz4" name="q">
             <option value="1">1</option>
@@ -99,7 +99,7 @@
       <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
         <img src="img/millefeui.avif" class="img-fluid rounded pb-1 ms-5 object-fit-cover cat" alt="millefeuille" title="millefeuille">
         <div class="ms-5 mb-5">
-          <div class="link-danger fw-bold">Millefeuille<br></div>
+        <p><a href="#" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Millefeuille</a></p>
           <div>Prix : 4 €</div><label>Quantité: </label>
           <select id="qz5" name="q">
             <option value="1">1</option>
@@ -118,7 +118,7 @@
       <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
         <img src="img/creme-brulee-1200.jpg" class="img-fluid rounded pb-1 ms-5 object-fit-cover  cat" alt="creme-brulee" title="creme-brulee">
         <div class="ms-5 mb-5">
-          <div class="link-danger fw-bold">Crème brulée <br></div>
+        <p><a href="#" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Crème brulée</a></p>
           <div>Prix : 4 €</div><label>Quantité: </label>
           <select id="qz6" name="q">
             <option value="1">1</option>
