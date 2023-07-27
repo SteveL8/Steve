@@ -21,9 +21,11 @@
   <div class="container img-fluid">
     <div class="row">
       <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
+        <a href="mousse_chocolat_description.php">
         <img src="img/mousse-chocolat-recette.jpg" class="img-fluid rounded-4 pb-1 object-fit-cover ms-5 cat" alt="mousse-chocolat" title="mousse-chocolat">
+        </a>
         <div class="ms-5">
-        <p><a href="#" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Mousse au chocolat</a></p>
+        <p><a href="mousse_chocolat_description.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Mousse au chocolat</a></p>
           <div>Prix : 4 €</div><label>Quantité: </label>
           <select id="qz" name="q">
             <option value="1">1</option>
@@ -40,9 +42,11 @@
         </div>
       </div>
       <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
+        <a href="tarte_citron_description.php">
         <img src="img/tarte-au-citron.jpeg" class="img-fluid rounded-4 pb-1 ms-5 object-fit-cover cat" alt="tarte-au-citron" title="tarte-au-citron">
+        </a>
         <div class="ms-5">
-        <p><a href="#" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Tarte au citron</a></p>
+        <p><a href="tarte_citron_description.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Tarte au citron</a></p>
           <div>Prix : 4 €</div><label>Quantité: </label>
           <select id="qz2" name="q">
             <option value="1">1</option>
@@ -59,9 +63,11 @@
         </div>
       </div>
       <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
+        <a href="tiramisu_description.php">
         <img src="img/Tiramisu.jpg" class="img-fluid rounded pb-1 ms-5 object-fit-cover  cat" alt="tiramisu" title="tiramisu">
+        </a>
         <div class="ms-5">
-        <p><a href="#" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Tiramisu</a></p>
+        <p><a href="tiramisu_description.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Tiramisu</a></p>
           <div>Prix : 4 €</div><label>Quantité: </label>
           <select id="qz3" name="q">
             <option value="1">1</option>
@@ -78,9 +84,11 @@
         </div>
       </div>
       <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
+        <a href="paris_b_description.php">
         <img src="img/Paris-Bre.JPG" class="img-fluid rounded pb-1 ms-5 object-fit-cover cat" alt="paris_brest" title="paris_brest">
+        </a>
         <div class="ms-5 mb-5">
-        <p><a href="#" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Paris brest</a></p>
+        <p><a href="paris_b_description.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Paris brest</a></p>
           <div>Prix : 4 €</div><label>Quantité: </label>
           <select id="qz4" name="q">
             <option value="1">1</option>
@@ -97,9 +105,11 @@
         </div>
       </div>
       <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
+        <a href="mille_description.php">
         <img src="img/millefeui.avif" class="img-fluid rounded pb-1 ms-5 object-fit-cover cat" alt="millefeuille" title="millefeuille">
+        </a>
         <div class="ms-5 mb-5">
-        <p><a href="#" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Millefeuille</a></p>
+        <p><a href="mille_description.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Millefeuille</a></p>
           <div>Prix : 4 €</div><label>Quantité: </label>
           <select id="qz5" name="q">
             <option value="1">1</option>
@@ -116,9 +126,11 @@
         </div>
       </div>
       <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
+        <a href="crème_b_description.php">
         <img src="img/creme-brulee-1200.jpg" class="img-fluid rounded pb-1 ms-5 object-fit-cover  cat" alt="creme-brulee" title="creme-brulee">
+        </a>
         <div class="ms-5 mb-5">
-        <p><a href="#" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Crème brulée</a></p>
+        <p><a href="crème_b_description.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Crème brulée</a></p>
           <div>Prix : 4 €</div><label>Quantité: </label>
           <select id="qz6" name="q">
             <option value="1">1</option>

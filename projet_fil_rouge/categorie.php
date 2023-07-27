@@ -44,7 +44,7 @@
         <p><a href="plat_boisson.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover ms-5 pb-5 h5">Boisson</a></p>
       </div>
       <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
-        <a href="plat_dessert.php"><img src="img/mousse-chocolat-recette.jpg" class="img-fluid rounded pb-5 ms-5 cat object-fit-cover" alt="Dessert" title="Dessert"></a>
+        <a href="plat_dessert.php"><img src="img/mousse-chocolat-recette.jpg" class="img-fluid rounded pb-1 ms-5 cat object-fit-cover" alt="Dessert" title="Dessert"></a>
         <p><a href="plat_dessert.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover ms-5 pb-5 h5">Dessert</a></p>
       </div>
     </div>

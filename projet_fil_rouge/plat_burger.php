@@ -23,7 +23,9 @@
   <div class="container img-fluid">
     <div class="row">
       <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
+        <a href="cheeseburger_description.php">
         <img src="img/cheeseb.jpg" class="img-fluid rounded-4 pb-1  ms-5 cat" alt="Cheeseburger" title="Cheeseburger" id="cheese">
+        </a>
         <div class="ms-5">
         <p><a href="cheeseburger_description.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">CheeseBurger</a></p>
           <div>Prix : 10,90 €</div><label>Quantité: </label>
@@ -42,9 +44,11 @@
         </div>
       </div>
       <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
+        <a href="fish_burger_description.php">
         <img src="img/Fishburger.jpg" class="img-fluid rounded-4 pb-1 ms-5 object-fit-cover cat" alt="FishBurger" title="FishBurger" id="fish">
+        </a>
         <div class="ms-5">
-        <p><a href="#" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">FishBurger</a></p>
+        <p><a href="fish_burger_description.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">FishBurger</a></p>
           <div>Prix : 10,90 €</div><label>Quantité: </label>
           <select id="qu2" name="q">
             <option value="1">1</option>
@@ -61,9 +65,11 @@
         </div>
       </div>
       <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
+        <a href="burger_bacon_description.php">
         <img src="img/burger_bacon.jpg" class="img-fluid rounded pb-1 ms-5 object-fit-cover  cat" alt="Burger_Bacon" title="Burger_Bacon" id="bacon">
+        </a>
         <div class="ms-5">
-        <p><a href="#" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Burger Bacon</a></p>
+        <p><a href="burger_bacon_description.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Burger Bacon</a></p>
           <div>Prix : 10,90 €</div><label>Quantité: </label>
           <select id="qu3" name="q">
             <option value="1">1</option>
@@ -80,9 +86,11 @@
         </div>
       </div>
       <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
+        <a href="burger_poulet_description.php">
         <img src="img/burger-poulet-croustillant.jpg" class="img-fluid rounded pb-1 ms-5 object-fit-cover cat" alt="Burger-poulet" title="Burger-poulet" id="poulet">
+        </a>
         <div class="ms-5 mb-5">
-        <p><a href="#" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Burger Poulet</a></p>
+        <p><a href="burger_poulet_description.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Burger Poulet</a></p>
           <div>Prix : 10,90 €</div><label>Quantité: </label>
           <select id="qu4" name="q">
             <option value="1">1</option>
@@ -99,9 +107,11 @@
         </div>
       </div>
       <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
+        <a href="burger_vetgie_description.php">
         <img src="img/burgers-vegetariens.jpg" class="img-fluid rounded pb-1 ms-5 object-fit-cover cat" alt="Burger_végétarien" title="burgers-vegetariens" id="vegies">
+        </a>
         <div class="ms-5 mb-5">
-        <p><a href="#" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Burger Vegetariens</a></p>
+        <p><a href="burger_vetgie_description.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Burger Vegetariens</a></p>
           <div>Prix : 10,90 €</div><label>Quantité: </label>
           <select id="qu5" name="q">
             <option value="1">1</option>
@@ -118,9 +128,11 @@
         </div>
       </div>
       <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
+        <a href="burger_poulet_avocat.php">
         <img src="img/burger-au-poulet-et-avocat.jpeg" class="img-fluid rounded pb-1 ms-5 object-fit-cover  cat" alt="burger-au-poulet-et-avocat" title="burger-au-poulet-et-avocat" id="burger_avocats">
+        </a>
         <div class="ms-5 mb-5">
-        <p><a href="#" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Burger au poulet et avocat</a></p>
+        <p><a href="burger_poulet_avocat.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Burger au poulet et avocat</a></p>
           <div>Prix : 10,90 €</div><label>Quantité: </label>
           <select id="qu6" name="q">
             <option value="1">1</option>

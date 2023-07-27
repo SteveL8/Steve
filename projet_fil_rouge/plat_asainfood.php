@@ -23,7 +23,9 @@
   <div class="container img-fluid">
     <div class="row">
       <div class="col-lg-4 col-md-6 col-sm-12 mt-4 ">
+        <a href="teriyaki_description.php">
         <img src="img/Recette-Poulet-Teriyaki.jpg" class="img-fluid rounded-4 pb-1 ms-5 object-fit-cover cat" alt="Poulet_Teriyaki" title="Poulet_Teriyaki" id="poulet">
+        </a>
         <div class="ms-5">
           <p><a href="teriyaki_description.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Poulet teriyaki</a></p>
           <div>Prix : 29,00 €</div><label>Quantité: </label>
@@ -42,7 +44,9 @@
         </div>
       </div>
       <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
+        <a href="sushi_description.php">
         <img src="img/Sushi.jpeg" class="img-fluid rounded-4 pb-1 ms-5 object-fit-cover cat" alt="Sushi" title="Sushi" id="sushi">
+        </a>
         <div class="ms-5">
           <p><a href="sushi_description.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Sushi</a></p>
           <div>Prix : 11,00 €</div><label>Quantité: </label>
@@ -61,7 +65,9 @@
         </div>
       </div>
       <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
+        <a href="ramen_description.php">
         <img src="img/Ramen.jpg" class="img-fluid rounded-4 pb-1 ms-5  cat" alt="Ramen" title="Ramen" id="ramen">
+        </a>
         <div class="ms-5">
           <p><a href="ramen_description.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Ramen</a></p>
           <div>Prix : 24,00 €</div><label>Quantité: </label>
@@ -80,7 +86,9 @@
         </div>
       </div>
       <div class="col-lg-4 col-md-6 col-sm-12  mt-5">
+        <a href="maki_description.php">
         <img src="img/maki-sushi.jpeg" class="img-fluid rounded-4 pb-1 ms-5 object-fit-cover cat" alt="Maki" title="Maki" id="maki">
+        </a>
         <div class="ms-5 mb-5">
           <p><a href="maki_description.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Maki</a></p>
           <div>Prix : 5,90 €</div><label>Quantité: </label>
@@ -99,7 +107,9 @@
         </div>
       </div>
       <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
+        <a href="soba_description.php">
         <img src="img/soba.jpg" class="img-fluid rounded-4 pb-1 ms-5 object-fit-cover cat" alt="Soba" title="Soba" id="soba">
+        </a>
         <div class="ms-5 mb-5">
           <p><a href="soba_description.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Soba</a></p>
           <div>Prix : 18,00 €</div><label>Quantité: </label>
@@ -118,7 +128,9 @@
         </div>
       </div>
       <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
+        <a href="brochette_description.php">
         <img src="img/Brochette.webp" class="img-fluid rounded-4 pb-1 ms-5 object-fit-cover cat" alt="Brochette" title="Borchette" id="brochette">
+        </a>
         <div class="ms-5 mb-5">
           <p><a href="brochette_description.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Brochette</a></p>
           <div>Prix : 9,90 €</div><label>Quantité: </label>

@@ -23,7 +23,7 @@
     <div class="container d-flex justify-content-center  align-items-center card border-dark rounded-4 mt-3 mb-5" style="max-width: 1600px;">
         <div class="row g-0">
             <div class="col-sm-4">
-                <img src="img/evian.jpg" class="img-fluid rounded-4 my-3" alt="pizza-margarita" title="pizza-margarita" style="width: 1000px;">
+                <img src="img/evian.jpg" class="img-fluid rounded-4 my-3 " alt="pizza-margarita" title="pizza-margarita" style="width: 1000px;">
             </div>
             <div class="col-sm-8">
                 <div class="card-body">

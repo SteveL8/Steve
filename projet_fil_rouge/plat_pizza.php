@@ -23,9 +23,11 @@
   <div class="container img-fluid">
     <div class="row">
       <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
+        <a href="pizza_saumon_description.php">
         <img src="img/pizza-salmon.png" class="img-fluid rounded-4 pb-1  ms-5 cat" alt="pizza_saumon" title="pizza_saumon">
+        </a>
         <div class="ms-5">
-        <p><a href="#" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Pizza saumon</a></p>
+        <p><a href="pizza_saumon_description.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Pizza saumon</a></p>
           <div>Prix : 11,50 €</div><label>Quantité: </label>
           <select id="qw" name="q">
             <option value="1">1</option>
@@ -42,9 +44,11 @@
         </div>
       </div>
       <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
+        <a href="pizza_margarita_descrition.php">
         <img src="img/pizza-margherita.jpg" class="img-fluid rounded-4 pb-1 ms-5 object-fit-cover cat" alt="pizza-margarita" title="pizza-margarita">
+        </a>
         <div class="ms-5">
-        <p><a href="#" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Pizza margarita</a></p>
+        <p><a href="pizza_margarita_descrition.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Pizza margarita</a></p>
           <div>Prix : 11,00 €</div><label>Quantité: </label>
           <select id="qw2" name="q">
             <option value="1">1</option>
@@ -61,9 +65,11 @@
         </div>
       </div>
       <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
+        <a href="pizza_chevremiel_description.php">
         <img src="img/cm.jpg" class="img-fluid rounded pb-1 ms-5 object-fit-cover  cat" alt="pizza_chevre_miel" title="pizza_chevre_miel">
+        </a>
         <div class="ms-5">
-        <p><a href="#" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Pizza chevre miel</a></p>
+        <p><a href="pizza_chevremiel_description.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Pizza chevre miel</a></p>
           <div>Prix : 12,50 €</div><label>Quantité: </label>
           <select id="qw3" name="q">
             <option value="1">1</option>
@@ -80,9 +86,11 @@
         </div>
       </div>
       <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
+        <a href="pizza_4fromage_description.php">
         <img src="img/pizza-4-fromage.webp" class="img-fluid rounded pb-1 ms-5 object-fit-cover cat" alt="pizza-4-fromage" title="pizza-4-fromage">
+        </a>
         <div class="ms-5 mb-5">
-        <p><a href="#" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Pizza 4 fromages</a></p>
+        <p><a href="pizza_4fromage_description.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Pizza 4 fromages</a></p>
           <div>Prix : 10,90 €</div><label>Quantité: </label>
           <select id="qw4" name="q">
             <option value="1">1</option>
@@ -99,9 +107,11 @@
         </div>
       </div>
       <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
+        <a href="pizza_chorizo_description.php">
         <img src="img/pizza-chorizo-123rf.jpg" class="img-fluid rounded pb-1 ms-5 object-fit-cover cat" alt="pizza-chorizo" title="pizza-chorizo">
+        </a>
         <div class="ms-5 mb-5">
-        <p><a href="#" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Pizza chorizo</a></p>
+        <p><a href="pizza_chorizo_description.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Pizza chorizo</a></p>
           <div>Prix : 10,50 €</div><label>Quantité: </label>
           <select id="qw5" name="q">
             <option value="1">1</option>
@@ -118,9 +128,11 @@
         </div>
       </div>
       <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
+        <a href="projet_fil_rouge/pizza_napolitaine_description.php">
         <img src="img/pizza-napolitaine.jpg" class="img-fluid rounded pb-1 ms-5 object-fit-cover  cat" alt="pizza-napolitaine" title="pizza-napolitaine">
+        </a>
         <div class="ms-5 mb-5">
-        <p><a href="#" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Pizza napolitaine</a></p>
+        <p><a href="pizza_napolitaine_description.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Pizza napolitaine</a></p>
           <div>Prix : 11,90 €</div><label>Quantité: </label>
           <select id="qw6" name="q">
             <option value="1">1</option>
