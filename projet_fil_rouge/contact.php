@@ -22,7 +22,7 @@
         //'a+' Crée un nouveau fichier si le fichier n'existe pas 
         $fp = fopen((date("Y-m-d-H-i-s") . ".txt"), "a+");
         //Données enregistrer dans le fichier
-        fputs($fp, $nom . "," . $prenom . "," . $mail . "," . $tel . "," . $demande);
+        fputs($fp, $nom . "," . $prenom . "," . $mail . "," . $tel . "," . $demande); 
     }
     ?>
     <?php
