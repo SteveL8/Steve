@@ -108,6 +108,15 @@ FROM employe;
 --29. Afficher les 5 premières lettres du nom des employés.La fonction "LEFT" prend deux arguments, la colonne et le nombre de carâctere à extraire.
 SELECT LEFT(nom, 5) AS 5lettres
 FROM employe;
---30. Afficher le nom et le rang de la lettre "r" dans le nom des employés.
+--30. Afficher le nom et le rang de la lettre "r" dans le nom des employés.Ultilisation de "INSTR" renverra la position de la lettre rechercher(sous-chaine) dans les nom(chaine) si il ne trouve rie il envoi 0. 
+SELECT nom, INSTR(nom, 'r') AS lettre_r
+FROM employe;
+--31. Afficher le nom, le nom en majuscule et le nom en miniscule de l'employé dont le nom est Vrante.Utilisation de "UPPER" pour mettre en majuscule le nom et l'inverse avec "LOWER". 
+SELECT nom, UPPER(nom) AS non_maj, LOWER(nom) AS nom_min
+FROM employe
+WHERE nom = 'Vrante';
+--32. Afficher le nom et le nombre de caractère du nom des employés.Utilisation de "LENGTH" qui renvoie le nombre de caractères des chaîne de caractères.
+SELECT nom, LENGTH(nom) AS nombre_caracteres
+FROM employe;
 
 
