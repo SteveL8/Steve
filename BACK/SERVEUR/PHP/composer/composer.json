@@ -1,0 +1,12 @@
+{
+    "name": "steve/steve",
+    "authors": [
+        {
+            "name": "Steve Lefort",
+            "email": "steve-ya@hotmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^10.3"
+    }
+}

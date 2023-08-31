@@ -118,7 +118,7 @@
 <?php
 echo date("d/m/Y", 1000200000. );
 echo "\n";
-echo " : L'attentat sur les tours jumelles de New york. "
+echo " : L'attentat des tours jumelles de New york. "
 ?>
 
 
