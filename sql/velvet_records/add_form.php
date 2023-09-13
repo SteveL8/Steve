@@ -20,10 +20,7 @@
                 <label for="artist_id">Artist :</label>
                 <select class="form-control" id="artist_id" name="artist_id" required>
                     <?php
-                    // Connexion à la base de données
-                    $db = new PDO('mysql:host=localhost;charset=utf8;dbname=record', 'admin', 'steve1234');
-                    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
+                   require("connexion_bdd.php");
                     // Requête pour récupérer la liste des artistes depuis la table artist
                     $requete = $db->prepare("SELECT artist_id, artist_name FROM artist");
                     $requete->execute();

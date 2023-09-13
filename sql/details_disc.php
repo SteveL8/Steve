@@ -1,9 +1,5 @@
 <?php
-    //Connecxion à la base de données.
-    $db = new PDO('mysql:host=localhost;charset=utf8;dbname=record', 'admin', 'steve1234');
-    //'setAtribute' ES utilisée pour definir un attribut a la connexion ici 'PDO::ERRMODE_EXECPTION' fait une exception si une erreur est
-    //detecter a la connexion attibuant quand même la connexion.
-    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    require("connexion_bdd.php");
     //Préparation d'une requête SQL, seclectionne tous les champ de la table 'disc' mais 'disc_id' est fixé sur un ID présent dans la colonne 'disc_id'
     $requete = $db->prepare("SELECT * FROM disc WHERE disc_id= 10");
     $requete->execute();
