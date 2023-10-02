@@ -69,7 +69,7 @@
         <img src="img/cm.jpg" class="img-fluid rounded pb-1 ms-5 object-fit-cover  cat" alt="pizza_chevre_miel" title="pizza_chevre_miel">
         </a>
         <div class="ms-5">
-        <p><a href="pizza_chevremiel_description.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Pizza chevre miel</a></p>
+        <p><a href="pizza_chevremiel_description.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Pizza chèvre miel</a></p>
           <div>Prix : 12,50 €</div><label>Quantité: </label>
           <select id="qw3" name="q">
             <option value="1">1</option>

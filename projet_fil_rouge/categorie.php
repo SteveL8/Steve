@@ -11,58 +11,49 @@
 
 <body>
   <?php
-  require("header.php")
+  require('connexion_db.php');
+  require("header.php");
+  require_once('DAO.php');
+  // Obtenir la liste des catégories
+  $categories = get_categories();
   ?>
-  <div class="container-">
+   <div class="container-">
     <div class="row">
-      <div class="col">
+      <div class="col mb-4">
         <img src="img/twitter_header_photo_2.png" class="img-fluid object-fit-cover" alt="Banniere" title="Banniere" id="banniere">
       </div>
     </div>
   </div>
-  <div class="container img-fluid">
-    <div class="row">
-      <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
-        <a href="plat_asainfood.php"><img src="img/Recette-Poulet-Teriyaki.jpg" class="img-fluid rounded pb-1 ms-5 cat object-fit-cover" alt="Japonais" title="Japonais"></a>
-        <p><a href="plat_asainfood.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover ms-5 pb-5 h5">Plat Japonais</a></p>
-
-      </div>
-      <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
-        <a href="plat_pasta.php"><img src="img/Pâtesricotta.jpeg" class="img-fluid rounded pb-1 ms-5 cat o" alt="pasta" title="pasta"></a>
-        <p><a href="plat_pasta.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover ms-5 pb-5 h5">Carte des pâtes  </a></p>
-      </div>
-      <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
-        <a href="plat_burger.php"><img src="img/cheeseb.jpg" class="img-fluid rounded pb-1 ms-5 cat object-fit-cover" alt="burger" title="burger"></a>
-        <p><a href="plat_burger.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover ms-5 pb-5 h5">Carte des burgers</a></p>
-      </div>
-      <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
-        <a href="plat_pizza.php"><img src="img/pizza_cat.jpg" class="img-fluid rounded pb-1 ms-5 cat" alt="pizza" title="pizza"></a>
-        <p><a href="plat_pizza.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover ms-5 pb-5 h5">Carte des pizzas</a></p>
-      </div>
-      <div class="col-lg-4 col-md-6 col-sm-12 mt-5 mb-5">
-        <a href="plat_boisson.php"><img src="img/evian.jpg" class="img-fluid rounded pb-1 ms-5 cat object-fit-cover" alt="Boissons" title="Boissons"></a>
-        <p><a href="plat_boisson.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover ms-5 pb-5 h5">Boisson</a></p>
-      </div>
-      <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
-        <a href="plat_dessert.php"><img src="img/mousse-chocolat-recette.jpg" class="img-fluid rounded pb-1 ms-5 cat object-fit-cover" alt="Dessert" title="Dessert"></a>
-        <p><a href="plat_dessert.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover ms-5 pb-5 h5">Dessert</a></p>
-      </div>
-    </div>
-  </div>
-    <!--<div class="container-fluid d-none d-lg-block">
-    <div class="row text-center">
-        <div class="col-6">
-            <a href="index.html"><button  class="btn btn-outline-secondary bouton" id="precedent">Précedent</button></a>
-        </div>
-        <div class="col-6">
-            <a href="plat.html"><button class="btn btn-outline-secondary  bouton" id="suivant">Suivant</button></a>
-        </div>
-    </div>
-   </div>-->
+  <ul class="list-unstyled d-flex flex-wrap justify-content-center">
     <?php
-    require("footer.php")
+    //récupère les categories les plus populaires 
+    $popularCategories = getIndexCategories();
+    //Vérifie si les catégories ont été récupérées
+    if ($popularCategories) :
+      foreach ($popularCategories as $category) :
     ?>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+        <li class="col-md-4 mb-4">
+          <div class="text-center">
+            <img src="<?= $category['image'] ?>" alt="<?= $category['libelle'] ?>" width="325" height="325" class=" object-fit-cover">
+          </div>
+          <div class="text-center mt-2">
+            <a href="<?= $category['lien'] ?>" style="color: #970747;" class="text-decoration-none font-weight-bold">
+              <strong><?= $category['libelle'] ?></strong>
+            </a>
+          </div>
+        </li>
+    <?php
+      endforeach;
+    else :
+      echo "Erreur lors de la récupération des catégories.";
+    endif;
+    ?>
+  </ul>
+
+  <?php
+  require("footer.php")
+  ?>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
 
 </html>

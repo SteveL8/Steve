@@ -64,9 +64,9 @@ WHERE p.libelle = 'mousse au chocolat';
 --Ecrivez une requête permettant d'augmenter de 10% le prix des plats de la catégorie 'Pizza'.
 UPDATE plat
 SET prix = prix * 1.10
-WHERE id_categorie = 4;
+WHERE id_categorie = 9;
 --Verification
 SELECT prix,id_categorie
 FROM plat
-WHERE id_categorie = 4;
+WHERE id_categorie = 9;
 
