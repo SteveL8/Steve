@@ -4,7 +4,7 @@ require('connexion_db.php');
 
 //Fonction pour obtenir la liste des catégories
 function get_categories() {
-    global $db;//Indique que $db est uen variable global 
+    global $db;//Indique que $db est une variable global 
     try {
         //Requête SQL pour sélectionner toutes les catégorie 
         $query = "SELECT * FROM categorie";
@@ -66,5 +66,21 @@ function getPlats($limit) {
     }
 }
 
+function getPlatsByCategory($categoryName) {
+    global $db;
+    try {
+        
+        $query = "SELECT * FROM plat WHERE id_categorie = (SELECT id FROM categorie WHERE libelle = :categoryName)";
+
+        $stmt = $db->prepare($query);
+        $stmt->bindParam(':categoryName', $categoryName, PDO::PARAM_STR);
+        $stmt->execute();
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+    } catch(PDOException $e) {
+        echo "Erreur de requête : " . $e->getMessage();
+        return null;
+    }
+}
 
 ?>

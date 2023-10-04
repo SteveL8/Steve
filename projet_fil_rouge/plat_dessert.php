@@ -10,154 +10,55 @@
 </head>
 
 <body>
-  <?php
-  require("header.php")
+<?php
+  require('connexion_db.php');
+  require("header.php");
+  require_once('DAO.php');
+
+  // Récupérez la liste des plats de cette catégorie
+  $plats = getPlatsByCategory('Dessert');
+
+  // Vérifiez si des plats ont été récupérés
+  if ($plats) {
+    
+      
   ?>
-  <div class="row">
-    <div class="col">
-      <img src="img/twitter_header_photo_2.png" class="img-fluid object-fit-cover" alt="Banniere" title="Banniere" id="banniere">
-    </div>
-  </div>
-  <div class="container img-fluid">
+   <div class="container-">
     <div class="row">
-      <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
-        <a href="mousse_chocolat_description.php">
-        <img src="img/mousse-chocolat-recette.jpg" class="img-fluid rounded-4 pb-1 object-fit-cover ms-5 cat" alt="mousse-chocolat" title="mousse-chocolat">
-        </a>
-        <div class="ms-5">
-        <p><a href="mousse_chocolat_description.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Mousse au chocolat</a></p>
-          <div>Prix : 4 €</div><label>Quantité: </label>
-          <select id="qz" name="q">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-          </select>
-          <button type="button" class="add-to-cart btn btn-outline-secondary" data-id="mousse" data-name="mousse-chocolat" data-price="4" data-weight="97" data-url="">Ajouter au panier</button>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
-        <a href="tarte_citron_description.php">
-        <img src="img/tarte-au-citron.jpeg" class="img-fluid rounded-4 pb-1 ms-5 object-fit-cover cat" alt="tarte-au-citron" title="tarte-au-citron">
-        </a>
-        <div class="ms-5">
-        <p><a href="tarte_citron_description.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Tarte au citron</a></p>
-          <div>Prix : 4 €</div><label>Quantité: </label>
-          <select id="qz2" name="q">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-          </select>
-          <button type="button" class="add-to-cart btn btn-outline-secondary" data-id="citron" data-name="tarte-au-citron" data-price="4" data-weight="97" data-url="">Ajouter au panier</button>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
-        <a href="tiramisu_description.php">
-        <img src="img/Tiramisu.jpg" class="img-fluid rounded pb-1 ms-5 object-fit-cover  cat" alt="tiramisu" title="tiramisu">
-        </a>
-        <div class="ms-5">
-        <p><a href="tiramisu_description.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Tiramisu</a></p>
-          <div>Prix : 4 €</div><label>Quantité: </label>
-          <select id="qz3" name="q">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-          </select>
-          <button type="button" class="add-to-cart btn btn-outline-secondary" data-id="tira" data-name="tiramisu" data-price="4" data-weight="97" data-url="">Ajouter au panier</button>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
-        <a href="paris_b_description.php">
-        <img src="img/Paris-Bre.JPG" class="img-fluid rounded pb-1 ms-5 object-fit-cover cat" alt="paris_brest" title="paris_brest">
-        </a>
-        <div class="ms-5 mb-5">
-        <p><a href="paris_b_description.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Paris brest</a></p>
-          <div>Prix : 4 €</div><label>Quantité: </label>
-          <select id="qz4" name="q">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-          </select>
-          <button type="button" class="add-to-cart btn btn-outline-secondary" data-id="paris" data-name="paris_brest" data-price="4" data-weight="97" data-url="">Ajouter au panier</button>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
-        <a href="mille_description.php">
-        <img src="img/millefeui.avif" class="img-fluid rounded pb-1 ms-5 object-fit-cover cat" alt="millefeuille" title="millefeuille">
-        </a>
-        <div class="ms-5 mb-5">
-        <p><a href="mille_description.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Millefeuille</a></p>
-          <div>Prix : 4 €</div><label>Quantité: </label>
-          <select id="qz5" name="q">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-          </select>
-          <button type="button" class="add-to-cart btn btn-outline-secondary" data-id="mille" data-name="millefeuille" data-price="4" data-weight="97" data-url="">Ajouter au panier</button>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
-        <a href="crème_b_description.php">
-        <img src="img/creme-brulee-1200.jpg" class="img-fluid rounded pb-1 ms-5 object-fit-cover  cat" alt="creme-brulee" title="creme-brulee">
-        </a>
-        <div class="ms-5 mb-5">
-        <p><a href="crème_b_description.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Crème brulée</a></p>
-          <div>Prix : 4 €</div><label>Quantité: </label>
-          <select id="qz6" name="q">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-          </select>
-          <button type="button" class="add-to-cart btn btn-outline-secondary" data-id="creme" data-name="creme-brulee" data-price="4" data-weight="97" data-url="">Ajouter au panier</button>
-        </div>
-      </div>
-    </div>
-    <div class="container-fluid d-none d-lg-block">
-      <div class="row text-center">
-        <div class="col-6">
-          <a href="plat_boisson.php"><button class="btn btn-outline-secondary mt-5 bouton" id="precedent">Précedent</button></a>
-        </div>
-        <div class="col-6">
-          <a href="plat_asainfood.php"><button class="btn btn-outline-secondary mt-5  bouton" id="suivant">Suivant</button></a>
-        </div>
+      <div class="col mb-4">
+        <img src="img/twitter_header_photo_2.png" class="img-fluid object-fit-cover" alt="Banniere" title="Banniere" id="banniere">
       </div>
     </div>
   </div>
+      <div class="container mt-2 mb-5">
+    <div class="row">
+        <?php
+        foreach ($plats as $plat) {
+        ?>
+        <div class="col-md-4 mt-1">
+            <div class="card h-100 ">
+                <img src="<?= $plat['image'] ?>" alt="<?= $plat['libelle'] ?>" width="325" height="325" class="card-img-top object-fit-cover">
+                <div class="card-body">
+                    <h5 class="card-title"><?= $plat['libelle'] ?></h5>
+                    <p class="card-text"><?= $plat['description'] ?></p>
+                    <p class="card-text">Prix : <?= $plat['prix'] ?> €</p>
+                </div>
+                <a href="#" class="btn btn-primary" style="width: 150px;">Ajouter au panier</a>
+            </div>
+            
+        </div>
+        <?php
+        }
+        ?>
+    </div>
+</div>
+
+  <?php
+    }
+   else {
+    echo "Aucun plat trouvé dans cette catégorie.";
+  }
+  ?>
   <?php
   require("footer.php")
   ?>

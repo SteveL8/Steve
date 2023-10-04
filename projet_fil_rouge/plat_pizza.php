@@ -10,156 +10,55 @@
 </head>
 
 <body>
-  <?php
-  require("header.php")
+<?php
+  require('connexion_db.php');
+  require("header.php");
+  require_once('DAO.php');
+
+  // Récupérez la liste des plats de cette catégorie
+  $plats = getPlatsByCategory('Pizzas');
+
+  // Vérifiez si des plats ont été récupérés
+  if ($plats) {
+    
+      
   ?>
-  <div class="container-">
+   <div class="container-">
     <div class="row">
-      <div class="col">
+      <div class="col mb-4">
         <img src="img/twitter_header_photo_2.png" class="img-fluid object-fit-cover" alt="Banniere" title="Banniere" id="banniere">
       </div>
     </div>
   </div>
-  <div class="container img-fluid">
+      <div class="container mt-2 mb-5">
     <div class="row">
-      <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
-        <a href="pizza_saumon_description.php">
-        <img src="img/pizza-salmon.png" class="img-fluid rounded-4 pb-1  ms-5 cat" alt="pizza_saumon" title="pizza_saumon">
-        </a>
-        <div class="ms-5">
-        <p><a href="pizza_saumon_description.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Pizza saumon</a></p>
-          <div>Prix : 11,50 €</div><label>Quantité: </label>
-          <select id="qw" name="q">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-          </select>
-          <button type="button" class="add-to-cart btn btn-outline-secondary" data-id="saumon" data-name="pizza_saumon" data-price="11,50" data-weight="97" data-url="">Ajouter au panier</button>
+        <?php
+        foreach ($plats as $plat) {
+        ?>
+        <div class="col-md-4 mt-1">
+            <div class="card h-100 ">
+                <img src="<?= $plat['image'] ?>" alt="<?= $plat['libelle'] ?>" width="325" height="325" class="card-img-top object-fit-cover">
+                <div class="card-body">
+                    <h5 class="card-title"><?= $plat['libelle'] ?></h5>
+                    <p class="card-text"><?= $plat['description'] ?></p>
+                    <p class="card-text">Prix : <?= $plat['prix'] ?> €</p>
+                </div>
+                <a href="#" class="btn btn-primary" style="width: 150px;">Ajouter au panier</a>
+            </div>
+            
         </div>
-      </div>
-      <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
-        <a href="pizza_margarita_descrition.php">
-        <img src="img/pizza-margherita.jpg" class="img-fluid rounded-4 pb-1 ms-5 object-fit-cover cat" alt="pizza-margarita" title="pizza-margarita">
-        </a>
-        <div class="ms-5">
-        <p><a href="pizza_margarita_descrition.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Pizza margarita</a></p>
-          <div>Prix : 11,00 €</div><label>Quantité: </label>
-          <select id="qw2" name="q">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-          </select>
-          <button type="button" class="add-to-cart btn btn-outline-secondary" data-id="margarita" data-name="pizza-margarita" data-price="11,00" data-weight="97" data-url="">Ajouter au panier</button>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 col-sm-12 mt-4">
-        <a href="pizza_chevremiel_description.php">
-        <img src="img/cm.jpg" class="img-fluid rounded pb-1 ms-5 object-fit-cover  cat" alt="pizza_chevre_miel" title="pizza_chevre_miel">
-        </a>
-        <div class="ms-5">
-        <p><a href="pizza_chevremiel_description.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Pizza chèvre miel</a></p>
-          <div>Prix : 12,50 €</div><label>Quantité: </label>
-          <select id="qw3" name="q">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-          </select>
-          <button type="button" class="add-to-cart btn btn-outline-secondary" data-id="chevre_miel" data-name="pizza_chevre_miel" data-price="12,50" data-weight="97" data-url="">Ajouter au panier</button>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
-        <a href="pizza_4fromage_description.php">
-        <img src="img/pizza-4-fromage.webp" class="img-fluid rounded pb-1 ms-5 object-fit-cover cat" alt="pizza-4-fromage" title="pizza-4-fromage">
-        </a>
-        <div class="ms-5 mb-5">
-        <p><a href="pizza_4fromage_description.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Pizza 4 fromages</a></p>
-          <div>Prix : 10,90 €</div><label>Quantité: </label>
-          <select id="qw4" name="q">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-          </select>
-          <button type="button" class="add-to-cart btn btn-outline-secondary" data-id="4-fromage" data-name="pizza-4-fromage" data-price="10,90" data-weight="97" data-url="">Ajouter au panier</button>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
-        <a href="pizza_chorizo_description.php">
-        <img src="img/pizza-chorizo-123rf.jpg" class="img-fluid rounded pb-1 ms-5 object-fit-cover cat" alt="pizza-chorizo" title="pizza-chorizo">
-        </a>
-        <div class="ms-5 mb-5">
-        <p><a href="pizza_chorizo_description.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Pizza chorizo</a></p>
-          <div>Prix : 10,50 €</div><label>Quantité: </label>
-          <select id="qw5" name="q">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-          </select>
-          <button type="button" class="add-to-cart btn btn-outline-secondary" data-id="chorizo" data-name="pizza-chorizo" data-price="10,50" data-weight="97" data-url="">Ajouter au panier</button>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 col-sm-12 mt-5">
-        <a href="projet_fil_rouge/pizza_napolitaine_description.php">
-        <img src="img/pizza-napolitaine.jpg" class="img-fluid rounded pb-1 ms-5 object-fit-cover  cat" alt="pizza-napolitaine" title="pizza-napolitaine">
-        </a>
-        <div class="ms-5 mb-5">
-        <p><a href="pizza_napolitaine_description.php" class="link-danger link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover fw-bold h5">Pizza napolitaine</a></p>
-          <div>Prix : 11,90 €</div><label>Quantité: </label>
-          <select id="qw6" name="q">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-          </select>
-          <button type="button" class="add-to-cart btn btn-outline-secondary" data-id="napolitaine" data-name="pizza-napolitaine" data-price="11,90" data-weight="97" data-url="">Ajouter au panier</button>
-        </div>
-      </div>
+        <?php
+        }
+        ?>
     </div>
-    <div class="container-fluid d-none d-lg-block">
-      <div class="row text-center">
-        <div class="col-6">
-          <a href="plat_burger.php"><button class="btn btn-outline-secondary mt-5 bouton" id="precedent">Précedent</button></a>
-        </div>
-        <div class="col-6">
-          <a href="plat_boisson.php"><button class="btn btn-outline-secondary mt-5  bouton" id="suivant">Suivant</button></a>
-        </div>
-      </div>
-    </div>
-  </div>
+</div>
+
+  <?php
+    }
+   else {
+    echo "Aucun plat trouvé dans cette catégorie.";
+  }
+  ?>
     <?php
     require("footer.php")
     ?>
