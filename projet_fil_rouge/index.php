@@ -11,14 +11,25 @@
 
 <body>
   <?php
+  session_start();
   require('connexion_db.php');
   require("header.php");
-  require_once('DAO.php');
+  require('DAO.php');
+  require('fonctionPanier.php');
+  if (isset($_SESSION['panier']) && !empty($_SESSION['panier'])) {
+    $panier = $_SESSION['panier'];
+  } else {
+    $panier = array();
+  }
+
+  $_SESSION['panier'];
   //Récupère les 3 plats 
   $topPlats = getPlats(3);
 
-  // Obtenir la liste des catégories
+  //Obtenir la liste des catégories
   $categories = get_categories();
+
+
   //Vérifie si des catégorie ont été récupèrées
   if ($categories) {
     foreach ($categories as $category) {

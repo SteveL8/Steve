@@ -27,7 +27,7 @@
                 <p><span style="color: red;">* </span>Ces champs sont obligatoire </p>
             </div>
         </div>
-        <form class="row" method="POST" id="formco">
+        <form class="row" method="POST" id="formco" action="traitement_commande.php">
             <div class="col-lg-12 col-md-12 col-sm-12 mt-4">
                 <label  class="form-label"><span style="color: red">* </span>Nom et Prenom</label>
                 <input type="text" name="nomEtPrenom" class="form-control h-50">

@@ -10,52 +10,55 @@
 </head>
 
 <body>
-<?php
+  <?php
   require('connexion_db.php');
   require("header.php");
   require_once('DAO.php');
 
-  // Récupérez la liste des plats de cette catégorie
+  // Récupére la liste des plats de cette catégorie
   $plats = getPlatsByCategory('Dessert');
 
-  // Vérifiez si des plats ont été récupérés
+  // Vérifie si des plats ont été récupérés
   if ($plats) {
-    
-      
+
+
   ?>
-   <div class="container-">
-    <div class="row">
-      <div class="col mb-4">
-        <img src="img/twitter_header_photo_2.png" class="img-fluid object-fit-cover" alt="Banniere" title="Banniere" id="banniere">
+    <div class="container-">
+      <div class="row">
+        <div class="col mb-4">
+          <img src="img/twitter_header_photo_2.png" class="img-fluid object-fit-cover" alt="Banniere" title="Banniere" id="banniere">
+        </div>
       </div>
     </div>
-  </div>
-      <div class="container mt-2 mb-5">
-    <div class="row">
+    <div class="container mt-2 mb-5">
+      <div class="row">
         <?php
         foreach ($plats as $plat) {
         ?>
-        <div class="col-md-4 mt-1">
+          <div class="col-md-4 mt-1">
             <div class="card h-100 ">
-                <img src="<?= $plat['image'] ?>" alt="<?= $plat['libelle'] ?>" width="325" height="325" class="card-img-top object-fit-cover">
-                <div class="card-body">
-                    <h5 class="card-title"><?= $plat['libelle'] ?></h5>
-                    <p class="card-text"><?= $plat['description'] ?></p>
-                    <p class="card-text">Prix : <?= $plat['prix'] ?> €</p>
+              <img src="<?= $plat['image'] ?>" alt="<?= $plat['libelle'] ?>" width="325" height="325" class="card-img-top object-fit-cover">
+              <div class="card-body">
+                <h5 class="card-title"><?= $plat['libelle'] ?></h5>
+                <p class="card-text"><?= $plat['description'] ?></p>
+                <p class="card-text">Prix : <?= $plat['prix'] ?> €</p>
+                <div class="input-group ">
+                  <span class="input-group-text">Quantité</span>
+                  <input type="number" class="form-control" value="1" min="1" max="20">
                 </div>
-                <a href="#" class="btn btn-primary" style="width: 150px;">Ajouter au panier</a>
+              </div>
+              <a href="#" class="btn btn-primary" style="width: 150px;">Ajouter au panier</a>
             </div>
-            
-        </div>
+
+          </div>
         <?php
         }
         ?>
+      </div>
     </div>
-</div>
 
   <?php
-    }
-   else {
+  } else {
     echo "Aucun plat trouvé dans cette catégorie.";
   }
   ?>
