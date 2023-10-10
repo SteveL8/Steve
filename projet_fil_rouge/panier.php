@@ -11,10 +11,11 @@
 
 <body>
     <?php
-    session_start();
     require('connexion_db.php');
     require('header.php');
     require('fonctionPanier.php');
+    session_start();
+
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['plat_id'])) {
         $plat_id = $_POST['plat_id'];
@@ -30,23 +31,33 @@
             'quantite' => 1,
             'image' => $plat_image,
         );
+        $_SESSION['panier'][] = $plat;
+
+        if (isset($_SESSION['panier']) && !empty($_SESSION['panier'])) {
+            $panier = $_SESSION['panier'];
+            // Maintenant, $panier contient les plats dans le panier
+        } else {
+            echo "Votre panier est vide.";
+        }
 
         // Ajoutez le plat au panier en utilisant la fonction ajouterAuPanier()
         ajouterAuPanier($plat);
     }
-
-    // Vérifiez si le panier contient des éléments
-    if (!empty($_SESSION['panier'])) {
-        $panier = $_SESSION['panier'];
-    } else {
-        $panier = array();
-    }
     ?>
 
-    <div class="container">
-        <?php
-        if (!empty($panier)) {
-        ?>
+    <div class="container-">
+        <div class="row">
+            <div class="col">
+                <img src="img/twitter_header_photo_2.png" class="img-fluid object-fit-cover" alt="Banniere" title="Banniere" id="banniere">
+            </div>
+        </div>
+    </div>
+    <?php
+
+    if (!empty($panier)) {
+    ?>
+
+        <div class="container">
             <h1>Votre Panier</h1>
             <table class="table">
                 <thead>
@@ -61,11 +72,12 @@
                 </thead>
                 <tbody>
                     <?php
+
                     foreach ($panier as $index => $plat) {
                     ?>
                         <tr>
-                            <td><?= $plat['libelle'] ?></td>
-                            <td><img src="<?= $plat['image'] ?>" alt="<?= $plat['libelle'] ?>" width="100"></td>
+                            <td><?= $plat['nom'] ?></td>
+                            <td><img src="<?= $plat['image'] ?>" alt="<?= $plat['nom'] ?>" width="100"></td>
                             <td><?= $plat['prix'] ?> €</td>
                             <td>
                                 <div class="input-group">
@@ -75,7 +87,7 @@
                             </td>
                             <td><?= $plat['prix'] * $plat['quantite'] ?> €</td>
                             <td>
-                                <form action="supprimer_plat.php" method="post">
+                                <form action="supprimePanier.php" method="post">
                                     <input type="hidden" name="index" value="<?= $index ?>">
                                     <button type="submit" class="btn btn-danger">Supprimer</button>
                                 </form>
@@ -88,14 +100,12 @@
             </table>
 
             <p>Total : <?= calculTotal() ?> €</p>
-        <?php
-        } else {
-            echo "<p>Votre panier est vide.</p>";
-        }
-        ?>
-    </div>
+        </div>
 
     <?php
+    } else {
+        echo "<div class='container'>Votre panier est vide.</div>";
+    }
     require("footer.php")
     ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
