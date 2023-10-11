@@ -15,12 +15,6 @@
   require('connexion_db.php');
   require("header.php");
   require('DAO.php');
-  require('fonctionPanier.php');
-  if (isset($_SESSION['panier']) && !empty($_SESSION['panier'])) {
-    $panier = $_SESSION['panier'];
-  } else {
-    $panier = array();
-  }
 
   $_SESSION['panier'];
   //Récupère les 3 plats 

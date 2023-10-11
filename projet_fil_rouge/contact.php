@@ -26,7 +26,11 @@
     }
     ?>
     <?php
-    require("header.php")
+    session_start();
+    require('connexion_db.php');
+    require("header.php");
+    require('DAO.php');
+    $_SESSION['panier'];
     ?>
     <div class="container-">
         <div class="row">

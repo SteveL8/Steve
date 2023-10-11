@@ -11,9 +11,11 @@
 
 <body>
   <?php
+  session_start();
   require('connexion_db.php');
   require("header.php");
-  require_once('DAO.php');
+  require('DAO.php');
+  $_SESSION['panier'];
   // Obtenir la liste des catégories
   $categories = get_categories();
   ?>

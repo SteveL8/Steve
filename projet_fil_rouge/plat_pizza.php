@@ -11,10 +11,12 @@
 
 <body>
   <?php
+  session_start();
   require('connexion_db.php');
   require("header.php");
-  require_once('DAO.php');
-
+  require('DAO.php');
+   
+  $_SESSION['panier'];
   // Récupére la liste des plats de cette catégorie
   $plats = getPlatsByCategory('Pizzas');
 

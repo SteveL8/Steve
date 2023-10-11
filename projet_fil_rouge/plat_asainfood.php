@@ -11,10 +11,12 @@
 
 <body>
   <?php
+  session_start();
   require('connexion_db.php');
   require("header.php");
-  require_once('DAO.php');
+  require('DAO.php');
 
+  $_SESSION['panier'];
   // Récupére la liste des plats de cette catégorie
   $plats = getPlatsByCategory('Plat Japonais');
 
@@ -42,9 +44,9 @@
                 <h5 class="card-title"><?= $plat['libelle'] ?></h5>
                 <p class="card-text"><?= $plat['description'] ?></p>
                 <p class="card-text">Prix : <?= $plat['prix'] ?> €</p>
-                <div class="input-group ">
+                <div class="input-group">
                   <span class="input-group-text">Quantité</span>
-                  <input type="number" class="form-control" value="1" min="1" max="20">
+                  <input type="number" class="form-control" name="quantite_<?= $plat['id'] ?>" value="1" min="1" max="20">
                 </div>
               </div>
               <form method="post" action="panier.php">
@@ -73,4 +75,4 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
 
-</html> 
+</html>

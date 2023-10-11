@@ -9,39 +9,39 @@
     <title>Panier</title>
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
     <?php
+    session_start();
+
+    if (!isset($_SESSION['panier'])) {
+        $_SESSION['panier'] = array();
+    }
+
     require('connexion_db.php');
     require('header.php');
     require('fonctionPanier.php');
-    session_start();
-
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['plat_id'])) {
         $plat_id = $_POST['plat_id'];
         $plat_libelle = $_POST['plat_libelle'];
         $plat_prix = $_POST['plat_prix'];
         $plat_image = $_POST['plat_image'];
+        $quantite = isset($_POST['quantite_' . $plat_id]) ? (int)$_POST['quantite_' . $plat_id] : 1;
 
-        // Créez un tableau pour représenter le plat
         $plat = array(
             'id' => $plat_id,
-            'libelle' => $plat_libelle,
+            'nom' => $plat_libelle,
             'prix' => $plat_prix,
-            'quantite' => 1,
+            'quantite' => $quantite,
             'image' => $plat_image,
         );
         $_SESSION['panier'][] = $plat;
+    }
 
-        if (isset($_SESSION['panier']) && !empty($_SESSION['panier'])) {
-            $panier = $_SESSION['panier'];
-            // Maintenant, $panier contient les plats dans le panier
-        } else {
-            echo "Votre panier est vide.";
-        }
-
-        // Ajoutez le plat au panier en utilisant la fonction ajouterAuPanier()
-        ajouterAuPanier($plat);
+    if (isset($_SESSION['panier']) && !empty($_SESSION['panier'])) {
+        $panier = $_SESSION['panier'];
+    } else {
+        $panier = array();
     }
     ?>
 
@@ -57,7 +57,7 @@
     if (!empty($panier)) {
     ?>
 
-        <div class="container">
+        <div class="container flex-grow-1">
             <h1>Votre Panier</h1>
             <table class="table">
                 <thead>
@@ -79,12 +79,7 @@
                             <td><?= $plat['nom'] ?></td>
                             <td><img src="<?= $plat['image'] ?>" alt="<?= $plat['nom'] ?>" width="100"></td>
                             <td><?= $plat['prix'] ?> €</td>
-                            <td>
-                                <div class="input-group">
-                                    <span class="input-group-text">Quantité</span>
-                                    <input type="number" class="form-control" value="<?= $plat['quantite'] ?>" min="1" max="20">
-                                </div>
-                            </td>
+                            <td><?= $plat['quantite'] ?></td>
                             <td><?= $plat['prix'] * $plat['quantite'] ?> €</td>
                             <td>
                                 <form action="supprimePanier.php" method="post">
@@ -98,8 +93,8 @@
                     ?>
                 </tbody>
             </table>
-
-            <p>Total : <?= calculTotal() ?> €</p>
+            <a href="commande.php" class="btn btn-primary">Passer la commande</a>
+            <p class="text-end fs-4">Total : <?= calculTotal() ?> €</p>
         </div>
 
     <?php
