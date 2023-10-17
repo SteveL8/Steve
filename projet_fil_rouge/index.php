@@ -44,7 +44,7 @@
 
       <ul class="row">
         <?php
-        //récupère les categories les plus populaire 
+        //Récupère les categories les plus populaire 
         $popularCategories = getIndexCategories();
         //Vérifie si les categories ont été récupèrées
         if ($popularCategories) :

@@ -14,7 +14,6 @@
     session_start();
     require('connexion_db.php');
     require("header.php");
-    require('DAO.php');
     $_SESSION['panier'];
     ?>
     <div class="container-">
@@ -55,6 +54,7 @@
             </div>
             <div class="row">
                 <div class="col position-relative mb-5">
+                <input type="hidden" name="idPlat" value="<?php echo $panier[0]['id']; ?>">
                     <button type="submit" class="btn btn-outline-secondary position-absolute end-0  mt-1" id="envoyer" value="formcontact">Envoyer</button>
                 </div>
             </div>

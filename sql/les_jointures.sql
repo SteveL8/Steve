@@ -17,7 +17,7 @@ FROM employe AS e
 JOIN dept AS d ON e.nodep = d.nodept
 WHERE d.nom = 'Distribution';
 
---.Rechercher le nom ete le salaire des employés qui gagnent plus que leur patron, et le nom et le salaire de leur patron.
+--.Rechercher le nom et le salaire des employés qui gagnent plus que leur patron, et le nom et le salaire de leur patron.
 SELECT e1.nom AS nom_employe,
 e1.salaire AS salaire_employe,
 e2.nom AS nom_sup,

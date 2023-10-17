@@ -6,13 +6,6 @@ function ajouterAuPanier($plat) {
     $panier[] = $plat;
 }
 
-function supprimerDuPanier($index) {
-    global $panier;
-    if (isset($panier[$index])) {
-        unset($panier[$index]);
-    }
-}
-
 function calculTotal(){
     global $panier;
     $total = 0;

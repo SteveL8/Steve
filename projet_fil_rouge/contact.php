@@ -13,7 +13,6 @@
     <?php
     //Utilisation de 'foreach' pour parcourir les valeur du tableau '$_POST'
     foreach ($_POST as $key => $value) {
-        //'{$key}' crée des variables dynamiques en utilisant le nom de chaque clé du tableau
         ${$key} = $value;
     }
     //vérifier si la variable $envoyer est déclarée
@@ -29,7 +28,6 @@
     session_start();
     require('connexion_db.php');
     require("header.php");
-    require('DAO.php');
     $_SESSION['panier'];
     ?>
     <div class="container-">
