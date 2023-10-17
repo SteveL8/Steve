@@ -13,7 +13,7 @@ $mail->isSMTP();
 $mail->Host = 'localhost';
 
 // On configure le port SMTP (587 est un port couramment utilisé)
-$mail->Port = 587;
+$mail->Port = 1025;
 
 $mail->SMTPAuth = false;
 

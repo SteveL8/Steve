@@ -44,14 +44,19 @@
                 <h5 class="card-title"><?= $plat['libelle'] ?></h5>
                 <p class="card-text"><?= $plat['description'] ?></p>
                 <p class="card-text">Prix : <?= $plat['prix'] ?> €</p>
-                <div class="input-group ">
+                <div class="input-group">
                   <span class="input-group-text">Quantité</span>
-                  <input type="number" class="form-control" value="1" min="1" max="20">
+                  <input type="number" class="form-control" name="quantite_<?= $plat['id'] ?>" value="1" min="1" max="20">
                 </div>
               </div>
-              <a href="#" class="btn btn-primary" style="width: 150px;">Ajouter au panier</a>
+              <form method="post" action="panier.php">
+                <input type="hidden" name="plat_id" value="<?= $plat['id'] ?>">
+                <input type="hidden" name="plat_libelle" value="<?= $plat['libelle'] ?>">
+                <input type="hidden" name="plat_prix" value="<?= $plat['prix'] ?>">
+                <input type="hidden" name="plat_image" value="<?= $plat['image'] ?>">
+                <button type="submit" class="btn btn-primary">Ajouter au panier</button>
+              </form>
             </div>
-
           </div>
         <?php
         }
