@@ -6,5 +6,8 @@
             "email": "steve-ya@hotmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "twig/extra-bundle": "^3.7",
+        "twig/cssinliner-extra": "^3.7"
+    }
 }

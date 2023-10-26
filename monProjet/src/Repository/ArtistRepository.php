@@ -21,6 +21,23 @@ class ArtistRepository extends ServiceEntityRepository
         parent::__construct($registry, Artist::class);
     }
 
+
+    public function getSomeArtists($name)
+    {
+            //$name est un paramètre qui pour cet exemple a comme valeur "Neil";
+    
+            $qb = $this->createQueryBuilder('a');
+            $qb
+                ->andWhere('a.name like :name') //le `placeholder, comme en PDO!
+                ->setParameter('name', '%'.$name.'%')
+                ->orderBy('a.id', 'ASC')
+                ->setMaxResults(10)
+                ->getQuery();
+            $query = $qb->getQuery();
+            $artists = $query->getResult();
+            return $artists;
+        }  
+
 //    /**
 //     * @return Artist[] Returns an array of Artist objects
 //     */

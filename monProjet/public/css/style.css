@@ -1,6 +1,6 @@
 body {
-    background-color: #070707;
+    background-color: rgb(0, 0, 0);
 }
-h1, p {
-    color: #13b4ac;
+h1, p, div {
+    color:rgb(0, 153, 255);
 }

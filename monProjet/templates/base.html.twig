@@ -19,10 +19,11 @@
         <li class="nav-item active">
             <a class="nav-link" href="{{ path('app_profil') }}">Profil</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-        </li>
     </ul>
+    <a class="navbar-brand" href="{{ path('app_contact') }}">Contact</a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
 </div>
 </nav>
         {% block body %}{% endblock %}
