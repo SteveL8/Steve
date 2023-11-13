@@ -12,7 +12,6 @@ class ProfilController extends AbstractController
     public function index(): Response
     {
         $info = ['lastname' => 'Loper', 'firstname' => 'Dave', 'email' => 'daveloper@code.dom', 'birthdate' => '01/01/1970'];
-
         return $this->render('profil/index.html.twig', [
             'informations' => $info
         ]);

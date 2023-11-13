@@ -19,7 +19,7 @@ class Commande
     #[ORM\Column(type: Types::DATE_MUTABLE)]
     private ?\DateTimeInterface $date_commande = null;
 
-    #[ORM\Column(type: Types::DECIMAL, precision: 10, scale: 10)]
+    #[ORM\Column(type: Types::DECIMAL, precision: 10, scale: 2)]
     private ?string $total = null;
 
     #[ORM\Column]
