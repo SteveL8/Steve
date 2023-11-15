@@ -28,6 +28,7 @@ class Commande
     #[ORM\ManyToOne(inversedBy: 'commande')]
     #[ORM\JoinColumn(nullable: false)]
     private ?Detail $details = null;
+    
 
     #[ORM\OneToMany(mappedBy: 'commandes', targetEntity: user::class)]
     private Collection $utilisateur;

@@ -22,8 +22,9 @@ class Detail
     #[ORM\JoinColumn(nullable: false)]
     private ?Plat $plat = null;
 
-    #[ORM\OneToMany(mappedBy: 'details', targetEntity: commande::class)]
+    #[ORM\OneToMany(mappedBy: 'details', targetEntity: Commande::class)]
     private Collection $commande;
+
 
     public function __construct()
     {

@@ -24,7 +24,9 @@ class Categorie
     #[ORM\Column]
     private ?bool $active = null;
 
-    #[ORM\OneToMany(mappedBy: 'categorie', targetEntity: plat::class)]
+    /**
+     * @ORM\OneToMany(targetEntity=Plat::class, mappedBy="categorie")
+     */
     private Collection $plats;
 
     public function __construct()
@@ -48,7 +50,6 @@ class Categorie
     {
         return $this->libelle;
     }
-    
 
     public function setLibelle(string $libelle): static
     {
@@ -82,14 +83,14 @@ class Categorie
     }
 
     /**
-     * @return Collection<int, plat>
+     * @return Collection<int, Plat>
      */
     public function getPlats(): Collection
     {
         return $this->plats;
     }
 
-    public function addPlat(plat $plat): static
+    public function addPlat(Plat $plat): static
     {
         if (!$this->plats->contains($plat)) {
             $this->plats->add($plat);
@@ -99,7 +100,7 @@ class Categorie
         return $this;
     }
 
-    public function removePlat(plat $plat): static
+    public function removePlat(Plat $plat): static
     {
         if ($this->plats->removeElement($plat)) {
             // set the owning side to null (unless already changed)

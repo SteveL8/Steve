@@ -35,8 +35,9 @@ class Plat
     #[ORM\JoinColumn(nullable: false)]
     private ?Categorie $categorie = null;
 
-    #[ORM\OneToMany(mappedBy: 'plat', targetEntity: detail::class)]
+    #[ORM\OneToMany(mappedBy: 'plat', targetEntity: Detail::class)]
     private Collection $details;
+
 
     public function __construct()
     {
