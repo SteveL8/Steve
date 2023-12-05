@@ -4,7 +4,8 @@ body {
 
 #banniere {
     width: 1847px;
-    height: 200px;
+    height: 300px;
+    object-fit: cover;
 }
 
 
@@ -26,6 +27,7 @@ li {
     width: 350px;
     height: 330px;
     padding-right: 4px;
+    object-fit: cover;
     
 }
 

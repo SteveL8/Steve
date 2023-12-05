@@ -1,20 +1,50 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello PanierController!{% endblock %}
+{% block title %}Panier{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <div class="container mt-4">
+        <h1 class="text-center mb-4">Panier</h1>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+        {% if data is not empty %}
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Image</th>
+                        <th scope="col">Nom</th>
+                        <th scope="col">Prix unitaire</th>
+                        <th scope="col">Quantité</th>
+                        <th scope="col">Supprimer</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in data %}
+                        <tr>
+                            <td><img src="{{ asset(item.plat.image) }}" alt="{{ item.plat.libelle }}" class="img-thumbnail" style="max-height: 50px;"></td>
+                            <td>{{ item.plat.libelle }}</td>
+                            <td>{{ item.plat.prix }}</td>
+                            <td>
+                                <form method="post" action="{{ path('ajouter', {'id': item.plat.id}) }}">
+                                <input type="number" name="quantite" value="{{ item.quantite }}" min="1">
+                                <button type="submit" class="btn btn-primary">Ajouter/Enlever</button>
+                               </form>
+                           </td>         
+                            <td>
+                                <a href="{{ path('supprime', {'id': item.plat.id}) }}" class="btn btn-danger">Supprimer</a>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/home/steve/Steve/theDistrict_s/src/Controller/PanierController.php'|file_link(0) }}">src/Controller/PanierController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/home/steve/Steve/theDistrict_s/templates/panier/index.html.twig'|file_link(0) }}">templates/panier/index.html.twig</a></code></li>
-    </ul>
-</div>
+            <div class="text-end">
+                <strong>Total du panier : {{ total }}</strong>
+            </div>
+             <div class="text-center mt-4">
+                <a href="{{ path('commande') }}" class="btn btn-success mb-5">Passer la commande</a>
+            </div>
+        {% else %}
+            <p>Votre panier est vide.</p>
+        {% endif %}
+    </div>
 {% endblock %}

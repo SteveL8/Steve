@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
@@ -28,9 +29,8 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column]
     private ?string $password = null;
 
-    #[ORM\ManyToOne(inversedBy: 'utilisateur')]
-    #[ORM\JoinColumn(nullable: false)]
-    private ?Commande $commandes = null;
+    #[ORM\OneToMany(mappedBy: 'utilisateur', targetEntity: Commande::class)]
+    private  $commandes;
 
     #[ORM\Column(length: 50)]
     private ?string $nom = null;
@@ -120,17 +120,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         // $this->plainPassword = null;
     }
 
-    public function getCommandes(): ?Commande
-    {
-        return $this->commandes;
-    }
-
-    public function setCommandes(?Commande $commandes): static
-    {
-        $this->commandes = $commandes;
-
-        return $this;
-    }
 
     public function getNom(): ?string
     {
@@ -200,6 +189,30 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setVille(string $ville): static
     {
         $this->ville = $ville;
+
+        return $this;
+    }
+
+    
+    /**
+     * @return Collection<int, Commande>
+     */
+    public function getCommandes(): Collection
+    {
+        return $this->commandes;
+    }
+
+    public function addCommande(Commande $commande): static
+    {
+        $this->commandes[] = $commande;
+        $commande->setUtilisateur($this);
+
+        return $this;
+    }
+
+    public function removeCommande(Commande $commande): static
+    {
+        $this->commandes->removeElement($commande);
 
         return $this;
     }

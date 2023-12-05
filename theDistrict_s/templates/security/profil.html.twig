@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Profil{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1 class="text-center mt-4">Mon profil</h1>
+        <h3>Bonjour {{ utilisateur.prenom }}</h3>
+        <p class="mt-3"><strong>Nom:</strong> {{ utilisateur.nom }}</p>
+        <p class="mt-3"><strong>Prenom:</strong> {{ utilisateur.prenom }}</p>
+        <p><strong>Téléphone:</strong> {{ utilisateur.telephone }}</p>
+        <p><strong>Email:</strong> {{ utilisateur.email }}</p>
+        <p><strong>Adresse:</strong> {{ utilisateur.adresse }} {{ utilisateur.cp }} {{ utilisateur.ville }}</p>
+    </div>
+    
+    <div class="container mt-4">
+        <div class="col">
+            <a href="{{ path('app_logout') }}">
+                <button type="submit" class="btn btn-danger btn-lg">Déconnexion</button>
+            </a>
+        </div>
+    </div>
+{% endblock %}

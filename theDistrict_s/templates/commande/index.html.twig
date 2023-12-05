@@ -1,20 +1,69 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello CommandeController!{% endblock %}
+{% block title %}Commande{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+<div class="container  ">
+    <h1 class="mt-4"> Ma commade  </h1>
+	<div class="row">
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+		 {{ form_start(formCommande, {'attr' : {'novalidate': 'novalidate'}} ) }}
+		<div class="text-danger">
+			{{ form_errors(formCommande) }}
+		</div>
+		{% for message in app.flashes('success') %}
+    <div class="alert alert-success">
+        {{ message }}
+    </div>
+{% endfor %}
+	</div>
+	<div class="row">
+	
+		<div class="col-md-6 my-2 ">
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/home/steve/Steve/theDistrict_s/src/Controller/CommandeController.php'|file_link(0) }}">src/Controller/CommandeController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/home/steve/Steve/theDistrict_s/templates/commande/index.html.twig'|file_link(0) }}">templates/commande/index.html.twig</a></code></li>
-    </ul>
+			{{ form_label(formCommande.adresse_de_livraison) }}
+			{{ form_widget(formCommande.adresse_de_livraison) }}
+			{{ form_errors(formCommande.adresse_de_livraison) }}
+		</div>
+	</div>
+	<div class="row">
+	   <div class=" col-md-6 my-2 ">
+
+			{{ form_label(formCommande.adresse_de_facturation) }}
+			{{ form_widget(formCommande.adresse_de_facturation) }}
+			{{ form_errors(formCommande.adresse_de_facturation) }}
+		</div>
+		
+		
+	</div>
+	<div class="row">
+      <div class=" col-md-4 my-2 ">
+		{{ form_label(formCommande.mode_de_paiement) }}
+			{{ form_widget(formCommande.mode_de_paiement) }}
+			{{ form_errors(formCommande.mode_de_paiement) }}
+	</div>
+	</div>
+		<div class="row">
+      <div class=" col-md-4 my-2 ">
+		{{ form_label(formCommande.accepte_cgu) }}
+			{{ form_widget(formCommande.accepte_cgu) }}
+			{{ form_errors(formCommande.accepte_cgu) }}
+	</div>
+	</div>
+		<div class="col mt-4 d-flex justify-content-end">
+    <button type="submit" class="btn btn-success btn-lg">Payer ma commande</button>
+</div>
+
+{{ form_end(formCommande) }}
+
+
+{% if app.flashes('success') is not empty %}
+    <div class="alert alert-success mt-4">
+        {{ app.flashes('success')[0] }}
+        
+    </div>
+{% endif %}
+	{{ form_end(formCommande) }}
+
 </div>
 {% endblock %}

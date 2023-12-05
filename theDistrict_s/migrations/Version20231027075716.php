@@ -20,9 +20,11 @@ final class Version20231027075716 extends AbstractMigration
     public function up(Schema $schema): void
     {
         // this up() migration is auto-generated, please modify it to your needs
-        $this->addSql('ALTER TABLE detail ADD plat_id INT NOT NULL');
-        $this->addSql('ALTER TABLE detail ADD CONSTRAINT FK_2E067F93D73DB560 FOREIGN KEY (plat_id) REFERENCES plat (id)');
-        $this->addSql('CREATE INDEX IDX_2E067F93D73DB560 ON detail (plat_id)');
+        if (!$schema->getTable('detail')->hasColumn('plat_id')) {
+            $this->addSql('ALTER TABLE detail ADD plat_id INT NOT NULL');
+            $this->addSql('ALTER TABLE detail ADD CONSTRAINT FK_2E067F93D73DB560 FOREIGN KEY (plat_id) REFERENCES plat (id)');
+            $this->addSql('CREATE INDEX IDX_2E067F93D73DB560 ON detail (plat_id)');
+        }
     }
 
     public function down(Schema $schema): void

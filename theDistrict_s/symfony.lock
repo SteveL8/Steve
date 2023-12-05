@@ -204,6 +204,9 @@
             "config/packages/security.yaml"
         ]
     },
+    "symfony/swiftmailer-bundle": {
+        "version": "v2.3.8"
+    },
     "symfony/translation": {
         "version": "6.2",
         "recipe": {
@@ -266,6 +269,9 @@
         "files": [
             "config/packages/messenger.yaml"
         ]
+    },
+    "symfonycasts/verify-email-bundle": {
+        "version": "v1.14.0"
     },
     "twig/extra-bundle": {
         "version": "v3.7.1"

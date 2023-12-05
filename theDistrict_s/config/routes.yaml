@@ -5,6 +5,4 @@ controllers:
         namespace: App\Controller
     type: attribute
 
-app_categorie:
-    path: '/categorie/{id}'
-    controller: 'App\Controller\CategorieController::show'
+

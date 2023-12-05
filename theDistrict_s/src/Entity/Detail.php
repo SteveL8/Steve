@@ -22,8 +22,10 @@ class Detail
     #[ORM\JoinColumn(nullable: false)]
     private ?Plat $plat = null;
 
-    #[ORM\OneToMany(mappedBy: 'details', targetEntity: Commande::class)]
-    private Collection $commande;
+    #[ORM\ManyToOne(inversedBy: 'details')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Commande $commande = null;
+
 
 
     public function __construct()
@@ -60,32 +62,14 @@ class Detail
         return $this;
     }
 
-    /**
-     * @return Collection<int, commande>
-     */
-    public function getCommande(): Collection
+    public function getCommande(): ?Commande
     {
         return $this->commande;
     }
 
-    public function addCommande(commande $commande): static
+    public function setCommande(?Commande $commande): static
     {
-        if (!$this->commande->contains($commande)) {
-            $this->commande->add($commande);
-            $commande->setDetails($this);
-        }
-
-        return $this;
-    }
-
-    public function removeCommande(commande $commande): static
-    {
-        if ($this->commande->removeElement($commande)) {
-            // set the owning side to null (unless already changed)
-            if ($commande->getDetails() === $this) {
-                $commande->setDetails(null);
-            }
-        }
+        $this->commande = $commande;
 
         return $this;
     }

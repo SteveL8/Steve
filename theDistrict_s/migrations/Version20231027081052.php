@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types=1);
+/*declare(strict_types=1);
 
 namespace DoctrineMigrations;
 
@@ -10,7 +10,7 @@ use Doctrine\Migrations\AbstractMigration;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-final class Version20231027081052 extends AbstractMigration
+/*final class Version20231027081052 extends AbstractMigration
 {
     public function getDescription(): string
     {
@@ -32,4 +32,4 @@ final class Version20231027081052 extends AbstractMigration
         $this->addSql('DROP INDEX IDX_8D93D6498BF5C2E6 ON `user`');
         $this->addSql('ALTER TABLE `user` DROP commandes_id, DROP nom');
     }
-}
+}*/

@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Confirmation de commande{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <h1 class="mt-4">Confirmation de commande</h1>
+        
+        <p>Votre commande a été passée avec succès. Merci pour votre achat!</p>
+
+        <p>Détails de la commande :</p>
+        <ul>
+            <li>Numéro de commande : {{ commande.getId() }}</li>
+            <li>Date de commande : {{ commande.getDateCommande()|date('Y-m-d H:i:s') }}</li>
+        </ul>
+
+        {% if app.flashes('success') is not empty %}
+            <div class="alert alert-success mt-4">
+                {{ app.flashes('success')[0] }}
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}

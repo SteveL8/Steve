@@ -18,15 +18,13 @@ class Categorie
     #[ORM\Column(length: 50)]
     private ?string $libelle = null;
 
-    #[ORM\Column(length: 50)]
+    #[ORM\Column(length: 100)]
     private ?string $image = null;
 
     #[ORM\Column]
     private ?bool $active = null;
 
-    /**
-     * @ORM\OneToMany(targetEntity=Plat::class, mappedBy="categorie")
-     */
+    #[ORM\OneToMany(mappedBy: 'categorie', targetEntity: Plat::class)]
     private Collection $plats;
 
     public function __construct()
@@ -38,10 +36,9 @@ class Categorie
     {
         return $this->id;
     }
-
-    public function setId(int $id): static
+    public function setId(string $id): static
     {
-        $this->id = $id;
+        $this->id= $id;
 
         return $this;
     }

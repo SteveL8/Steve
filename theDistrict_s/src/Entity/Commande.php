@@ -25,18 +25,29 @@ class Commande
     #[ORM\Column]
     private ?int $etat = null;
 
-    #[ORM\ManyToOne(inversedBy: 'commande')]
-    #[ORM\JoinColumn(nullable: false)]
-    private ?Detail $details = null;
+    #[ORM\OneToMany(mappedBy: 'commande', targetEntity: Detail::class, cascade: ['persist', 'remove'])]
+    private Collection $details;
     
 
-    #[ORM\OneToMany(mappedBy: 'commandes', targetEntity: user::class)]
-    private Collection $utilisateur;
+    #[ORM\ManyToOne(inversedBy: 'commandes')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?User $utilisateur = null;
+
+    #[ORM\Column(type: 'string', length: 255)]
+    private ?string $adresse_de_livraison = null;
+
+    #[ORM\Column(type: 'string', length: 255)]
+    private ?string $adresse_de_facturation = null;
+
+    #[ORM\Column(type: 'string', length: 255)]
+    private ?string $mode_de_paiement = null;
+    
 
     public function __construct()
-    {
-        $this->utilisateur = new ArrayCollection();
-    }
+{
+    $this->details = new ArrayCollection();
+    $this->utilisateur = null; 
+}
 
     public function getId(): ?int
     {
@@ -63,7 +74,6 @@ class Commande
     public function setTotal(string $total): static
     {
         $this->total = $total;
-
         return $this;
     }
 
@@ -79,45 +89,83 @@ class Commande
         return $this;
     }
 
-    public function getDetails(): ?Detail
+    /**
+     * @return Collection<int, Detail>
+     */
+    public function getDetails(): Collection
     {
         return $this->details;
     }
 
-    public function setDetails(?Detail $details): static
+    public function addDetail(Detail $detail): static
     {
-        $this->details = $details;
-
-        return $this;
-    }
-
-    /**
-     * @return Collection<int, user>
-     */
-    public function getUtilisateur(): Collection
-    {
-        return $this->utilisateur;
-    }
-
-    public function addUtilisateur(user $utilisateur): static
-    {
-        if (!$this->utilisateur->contains($utilisateur)) {
-            $this->utilisateur->add($utilisateur);
-            $utilisateur->setCommandes($this);
+        if (!$this->details->contains($detail)) {
+            $this->details->add($detail);
+            $detail->setCommande($this);
         }
 
         return $this;
     }
 
-    public function removeUtilisateur(user $utilisateur): static
+    public function removeDetail(Detail $detail): static
     {
-        if ($this->utilisateur->removeElement($utilisateur)) {
+        if ($this->details->removeElement($detail)) {
             // set the owning side to null (unless already changed)
-            if ($utilisateur->getCommandes() === $this) {
-                $utilisateur->setCommandes(null);
+            if ($detail->getCommande() === $this) {
+                $detail->setCommande(null);
             }
         }
 
         return $this;
     }
+
+    public function getUtilisateur(): ?User
+    {
+        return $this->utilisateur;
+    }
+
+    public function setUtilisateur(?User $utilisateur): static
+    {
+        $this->utilisateur = $utilisateur;
+
+        return $this;
+    }
+
+    public function getAdresseDeLivraison(): ?string
+    {
+        return $this->adresse_de_livraison;
+    }
+
+    public function setAdresseDeLivraison(?string $adresse_de_livraison): static
+    {
+        $this->adresse_de_livraison = $adresse_de_livraison;
+
+        return $this;
+    }
+
+    public function getAdresseDeFacturation(): ?string
+    {
+        return $this->adresse_de_facturation;
+    }
+
+    public function setAdresseDeFacturation(?string $adresse_de_facturation): static
+    {
+        $this->adresse_de_facturation = $adresse_de_facturation;
+
+        return $this;
+    }
+
+    public function getModeDePaiement(): ?string
+    {
+        return $this->mode_de_paiement;
+    }
+
+    public function setModeDePaiement(?string $mode_de_paiement): static
+    {
+        $this->mode_de_paiement = $mode_de_paiement;
+
+        return $this;
+    }
 }
+   
+
