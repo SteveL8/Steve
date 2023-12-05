@@ -3,11 +3,13 @@
 namespace App\Entity;
 
 use App\Repository\ArtistRepository;
+use ApiPlatform\Metadata\ApiResource; 
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: ArtistRepository::class)]
+#[ApiResource]
 class Artist
 {
     #[ORM\Id]

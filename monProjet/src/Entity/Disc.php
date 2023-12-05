@@ -3,9 +3,12 @@
 namespace App\Entity;
 
 use App\Repository\DiscRepository;
+use ApiPlatform\Metadata\ApiResource; 
 use Doctrine\ORM\Mapping as ORM;
 
+
 #[ORM\Entity(repositoryClass: DiscRepository::class)]
+#[ApiResource]
 class Disc
 {
     #[ORM\Id]
