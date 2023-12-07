@@ -2,9 +2,7 @@
 
 namespace App\Controller;
 
-use App\Entity\Commande;
 use App\Form\CommandeFormType;
-use App\Repository\PlatRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -21,12 +19,13 @@ class CommandeController extends AbstractController
     #[Route('/commande', name: 'commande')]
     public function Commande(Request $request, SessionInterface $session, EntityManagerInterface $manager, EventDispatcherInterface $dispatcher,  MailService $mailService): Response
     {   
+        # Création d'un formulaire 
         $formCommande = $this->createForm(CommandeFormType::class);
+        # Gèrer la requête du formulaire 
         $formCommande->handleRequest($request);
+        # Vérifie si le formulaire a été soumis et validé
         if ($formCommande->isSubmitted() && $formCommande->isValid()) {
-
-           
-           
+            # Récupère l'utilisateur connecté
             $user = $this->getUser();
 
             if ($user instanceof \App\Entity\User) {
@@ -35,25 +34,20 @@ class CommandeController extends AbstractController
     
                 $userId = null;
                    }
-
-            // récupérer le détail de la commande
-            $detail=$session->get('panier');
-            // dd($detail);
-           
-        
-            // Récupérer les éléments de la table commande
+            # Récup des données du formulaire 
             $commande =$formCommande->getData();
+            # Configuration de la commande 
             $commande->setDateCommande(new DateTime());
             $commande->setEtat(0);
             $commande->setUtilisateur($this->getUser());
-            // dd($commande);
-
+            
+            # Envoie un email pour comfirmer la commande
             $mailService->sendMail(
                 'the_district@gmail.fr',
                 $commande->getUtilisateur()->getEmail(),
-                'Confirmation de la commande',
+                'Confirmation de votre commande',
                 'Votre Commande est passée avec succès',
-                'Email/CommandeEmail.html.twig',
+                'Email/Email.html.twig',
                 ['commande' => $commande]
             );
            
@@ -61,22 +55,18 @@ class CommandeController extends AbstractController
             $manager->persist($commande);
             
 
-            // déclancher l'évenement
+        
             $event = new CommandeEvent($commande);
-            // distribuer l'evenement 
             $dispatcher->dispatch($event, 'commande.passee');
            
-            // supprimer le panier dans la sission 
+            
             $session->remove("panier");
 
-          // Ajouter un message flash de succès
+          
           $this->addFlash('success', 'Votre commande a été passée avec succès.');
 
-          //$this->redirectToRoute('catalogue');
         }
     
-        
-       
         return $this->render('commande/index.html.twig', [
             "formCommande"=>$formCommande,
         ]);

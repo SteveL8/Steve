@@ -12,17 +12,16 @@ class ContactController extends AbstractController
     #[Route('/contact', name: 'contact')]
     public function contact(Request $request): Response
     {
-        // Récupération des données du formulaire
+        # Récupération des données du formulaire
         $nom = $request->request->get('nom');
         $prenom = $request->request->get('prenom');
         $email = $request->request->get('email');
         $tel = $request->request->get('tel');
         $demande = $request->request->get('demande');
 
-        // Validation des champs (exemple simple)
+        # Validation des champs
         if (empty($nom) || empty($prenom) || empty($email) || empty($tel) || empty($demande)) {
             $this->addFlash('error', 'Tous les champs sont obligatoires');
-            // Redirection vers le formulaire
             return $this->redirectToRoute('contact');
         }
 

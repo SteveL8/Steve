@@ -31,8 +31,8 @@ class CommandeSubscriber implements EventSubscriberInterface
         $this->mailService->sendMail(
             'the_district@gmail.fr',
             $commande->getUtilisateur()->getEmail(),
-            'Confirmation de la commande',
-            'Votre Commande à bien était passé',
+            'Confirmation de votre commande',
+            'Votre Commande est passée avec succès',
             'Email/email.html.twig',
             ['commande' => $commande]
         );

@@ -20,7 +20,7 @@ class PanierController extends AbstractController
        
        $data=[];
        $total=0;
-       // Parcours le panier pour récupérer les informations des plats
+       # Parcours le panier pour récupérer les informations des plats
        foreach ($panier as $id => $quantite) {
         $plat=$platRepository->find($id);
         $data[]=[
@@ -66,7 +66,7 @@ class PanierController extends AbstractController
         ]);
     }
 
-     #Modifier la quantité d'un plat
+     # Modifier la quantité d'un plat
     #[Route('/ajouter/{id}', name: 'ajouter')]
 public function modifier(Plat $plat, SessionInterface $session)
 {
